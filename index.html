@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" prefix="og: http://ogp.me/ns#">
+<head>
+    <link rel="canonical" href="https://v2.vost.pw/"/>
+<!-- Yandex.RTB -->
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+<script src="https://yandex.ru/ads/system/context.js" async></script>
+    
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(22942090, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/22942090" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<meta name="yandex-verification" content="cc4a7a33c0630d6a" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<meta name="yandex-tableau-widget" content="logo=/logo.png, color=#ffffff" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<script src="/playerjs2.js" type="text/javascript"></script>
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>База №1 по просмотру аниме онлайн бесплатно</title>
+<meta name="description" content="Оригинальный сайт animevost (анимевост), на котором вы можете смотреть бесперебойно аниме онлайн (anime online) в хорошем качестве, без рекламы, стабильно и без задержке. Самая быстрая озвучка новых серий аниме через час после выхода в японии. Огромный каталог anime доступен как для online просмотра, так и для скачивание. Проект анимевост (animevost)." />
+<meta name="keywords" content="аниме, онлайн, anime, online, бесплатно, без регистрации, русская озвучка" />
+<meta name="generator" content="DataLife Engine (https://dle-news.ru)" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://v2.vost.pw/engine/opensearch.php" title="База №1 по просмотру аниме онлайн бесплатно" />
+<link rel="alternate" type="application/rss+xml" title="База №1 по просмотру аниме онлайн бесплатно" href="https://v2.vost.pw/rss.xml" />
+<script src="/engine/classes/js/jquery.js"></script>
+<script src="/engine/classes/js/jqueryui.js"></script>
+<script src="/engine/classes/js/dle_js.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+<script src="/engine/editor/scripts/webfont.js"></script>
+<link media="screen" href="/engine/editor/css/default.css" type="text/css" rel="stylesheet" />  
+<link rel="stylesheet" type="text/css" href="/templates/AnimeVostNext5/style/jquery.jscrollpane.css" media="all" />
+<link media="screen" href="/templates/AnimeVostNext5/style/magnific-popup.css" type="text/css" rel="stylesheet" />
+<link media="screen" href="/templates/AnimeVostNext5/style/drek_v3.css" type="text/css" rel="stylesheet" /> 
+    
+
+<script>
+function ajax(id,snum) {
+	var num=snum -2;
+	if (num<0) {num=0}
+	$('.kactive').removeClass('kactive');
+	$('#scroll').scrollTo("#" +num , 500, {axis:'x'});
+	$("#" +snum).addClass('kactive');
+	$.cookie(window.location.pathname,snum, { expires: 365 });
+        jQuery.ajax({        
+	    crossDomain: true,
+            url:     "/frame.php?play=" + id, 
+            type:     "GET", 
+            dataType: "html", 
+            success: function(response){ 
+                $('#player').html(response);
+             }
+        });
+   }
+
+function ajax2(id,snum) {
+	var num=snum -2;
+	if (num<0) {num=0}
+	$('.active').removeClass('active');
+	$('#scrolltwo').scrollTo("#p" +num , 500, {axis:'x'});
+	$("#p" +snum).addClass('active');
+	$.cookie(window.location.pathname,snum, { expires: 365 });
+        jQuery.ajax({        
+	    crossDomain: true,
+            url:     "/frame2.php?play=" + id, 
+            type:     "GET", 
+            dataType: "html", 
+            success: function(response,player){ 
+                $('#player2').html(response);
+             }
+        });
+   }
+
+
+//cookie---------------------------------------------------------------------------------------------------
+(function (factory) {
+	if (typeof define === 'function' && define.amd) {
+		define(['jquery'], factory);
+	} else if (typeof exports === 'object') {
+		factory(require('jquery'));
+	} else {
+		// Browser globals
+		factory(jQuery);
+	}
+}(function ($) {
+
+	var pluses = /\+/g;
+
+	function encode(s) {
+		return s;
+	}
+
+	function decode(s) {
+		return s;
+	}
+
+	function stringifyCookieValue(value) {
+		return encode(config.json ? JSON.stringify(value) : String(value));
+	}
+
+	function parseCookieValue(s) {
+		if (s.indexOf('"') === 0) {
+			// This is a quoted cookie as according to RFC2068, unescape...
+			s = s.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+		}
+
+		try {
+			// Replace server-side written pluses with spaces.
+			// If we can't decode the cookie, ignore it, it's unusable.
+			// If we can't parse the cookie, ignore it, it's unusable.
+			s = decodeURIComponent(s.replace(pluses, ' '));
+			return config.json ? JSON.parse(s) : s;
+		} catch(e) {}
+	}
+
+	function read(s, converter) {
+		var value = config.raw ? s : parseCookieValue(s);
+		return $.isFunction(converter) ? converter(value) : value;
+	}
+
+	var config = $.cookie = function (key, value, options) {
+
+		// Write
+
+		if (value !== undefined && !$.isFunction(value)) {
+			options = $.extend({}, config.defaults, options);
+
+			if (typeof options.expires === 'number') {
+				var days = options.expires, t = options.expires = new Date();
+				t.setTime(+t + days * 864e+5);
+			}
+
+			return (document.cookie = [
+				encode(key), '=', stringifyCookieValue(value),
+				options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+				options.path    ? '; path=' + options.path : '',
+				options.domain  ? '; domain=' + options.domain : '',
+				options.secure  ? '; secure' : ''
+			].join(''));
+		}
+
+		// Read
+
+		var result = key ? undefined : {};
+		var cookies = document.cookie ? document.cookie.split('; ') : [];
+
+		for (var i = 0, l = cookies.length; i < l; i++) {
+			var parts = cookies[i].split('=');
+			var name = decode(parts.shift());
+			var cookie = parts.join('=');
+
+			if (key && key === name) {
+				// If second argument (value) is a function it's a converter...
+				result = read(cookie, value);
+				break;
+			}
+
+			// Prevent storing a cookie that we couldn't decode.
+			if (!key && (cookie = read(cookie)) !== undefined) {
+				result[name] = cookie;
+			}
+		}
+
+		return result;
+	};
+
+	config.defaults = {};
+
+	$.removeCookie = function (key, options) {
+		if ($.cookie(key) === undefined) {
+			return false;
+		}
+
+		// Must not alter options, thus extending a fresh object...
+		$.cookie(key, '', $.extend({}, options, { expires: -1 }));
+		return !$.cookie(key);
+	};
+
+}));
+</script>
+<script src="/templates/AnimeVostNext5/js/jquery.magnific-popup.js"></script>
+<script  src="/templates/AnimeVostNext5/js/scroll.js"></script>
+<link media="screen" href="/templates/AnimeVostNext5/style/styles121.css?v9" type="text/css" rel="stylesheet"/>
+    
+  
+<link media="screen" href="/templates/AnimeVostNext5/style/styleOpisania.css" type="text/css" rel="stylesheet" />
+<link media="screen" href="/templates/AnimeVostNext5/style/engine.css" type="text/css" rel="stylesheet" />
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<script src="/templates/AnimeVostNext5/js/share42.js?v3"></script>
+<script src="/templates/AnimeVostNext5/js/bookmark.js?v3"></script>
+<script src="/templates/AnimeVostNext5/js/donate.js?v=3"></script>
+<script src="/baner_sparta.js?v3"></script>
+<script src="/openapi.js?96"></script>
+
+    
+<link rel="stylesheet" type="text/css"  href="/templates/AnimeVostNext5/style/player.css?v3"/>
+
+    
+    <script>
+function showBlock() {
+$(function(){
+    $('#fastPunkt').dialog({
+        autoOpen: true,
+        show: 'fade',
+        hide: 'fade',
+        width: 305,
+        height: 83,
+    });
+});
+}
+</script>
+<style>
+table {
+width:100%;
+border:none;
+}
+</style>
+    
+  
+</head>
+
+<body>
+    <!--LiveInternet counter--><script type="text/javascript">
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,150))+
+";"+Math.random();</script><!--/LiveInternet-->
+
+<script>
+<!--
+var dle_root       = '/';
+var dle_admin      = '';
+var dle_login_hash = '';
+var dle_group      = 5;
+var dle_skin       = 'AnimeVostNext5';
+var dle_wysiwyg    = '0';
+var quick_wysiwyg  = '0';
+var dle_act_lang   = ["Да", "Нет", "Ввод", "Отмена", "Сохранить", "Удалить", "Загрузка. Пожалуйста, подождите..."];
+var menu_short     = 'Быстрое редактирование';
+var menu_full      = 'Полное редактирование';
+var menu_profile   = 'Просмотр профиля';
+var menu_send      = 'Отправить сообщение';
+var menu_uedit     = 'Админцентр';
+var dle_info       = 'Информация';
+var dle_confirm    = 'Подтверждение';
+var dle_prompt     = 'Ввод информации';
+var dle_req_field  = 'Заполните все необходимые поля';
+var dle_del_agree  = 'Вы действительно хотите удалить? Данное действие невозможно будет отменить';
+var dle_spam_agree = 'Вы действительно хотите отметить пользователя как спамера? Это приведёт к удалению всех его комментариев';
+var dle_complaint  = 'Укажите текст Вашей жалобы для администрации:';
+var dle_big_text   = 'Выделен слишком большой участок текста.';
+var dle_orfo_title = 'Укажите комментарий для администрации к найденной ошибке на странице';
+var dle_p_send     = 'Отправить';
+var dle_p_send_ok  = 'Уведомление успешно отправлено';
+var dle_save_ok    = 'Изменения успешно сохранены. Обновить страницу?';
+var dle_del_news   = 'Удалить статью';
+var allow_dle_delete_news   = false;
+var dle_search_delay   = false;
+var dle_search_value   = '';
+$(function(){
+	FastSearch();
+});
+//-->
+</script>
+  
+    
+<div id="wrap">
+    
+<div style="margin: 0 auto; width: 1000px;">
+    <div class="topLine">
+        <div class="login">
+
+
+
+
+<form method="post" >
+<input id="login_name" name="login_name" type="text" value="Логин" onblur="if(this.value=='') this.value='Логин';" onfocus="if(this.value=='Логин') this.value='';" />
+<input id="login_password" name="login_password" type="password" value="Пароль" onblur="if(this.value=='') this.value='Пароль';" onfocus="if(this.value=='Пароль') this.value='';" />
+<input name="login" type="hidden" id="login" value="submit" />
+<input value="" type="submit" onclick="submit();" class="buttonEx"/>
+
+<div class="clr"></div>
+</form>
+
+<div id="vkLog"></div>
+<script>
+$.ajax({
+  url: '/invk.php',
+  success: function(data) {
+    $('#vkLog').html(data);
+  }
+});
+</script>
+<span style="left: 387px;" class="fromSpan"><a href="https://v2.vost.pw/index.php?do=lostpassword">Забыли пароль?</a><br />
+Господин, ты нам нужен! <a href="https://v2.vost.pw/index.php?do=register">Регистрируйся!</a></span>
+
+
+</div>
+        <div class="search">
+            <form class="search" name="searchform" method="post">
+            	<input type="hidden" name="do" value="search" />
+                <input type="hidden" name="subaction" value="search" />
+                <input class="search" id="story" name="story" value="Тут поиск, пользуйся, господин!" onblur="if(this.value=='') this.value='Тут поиск, пользуйся, господин!';" onfocus="if(this.value=='Тут поиск, пользуйся, господин!') this.value='';" type="text" />
+                <input class="searchButton" title="Найти" alt="Найти" type="image" src="/templates/AnimeVostNext5/images/button_searchBG.png" />
+            </form>
+		</div>
+    </div>
+</div>
+<!-- Шапка -->
+    
+<div class="headbgnewfour">
+        <a style="display: block; height: 100%; position: absolute; width: 100%;" href="https://espritgames.ru/dragoncontract/promo/dragoneggs/?esc=animevost_dc_banner_b001_l4_f" target="_blank"></a>
+
+        <div class="menu">
+            <ul id="topnav">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/zhanr/">Жанр</a>
+                <div class="sar">
+                    <span id="blok_1" >
+                        <a href="/zhanr/boyevyye-iskusstva/" >Боевые искусства</a>
+                        <a href="/zhanr/voyna/" >Война</a>
+                        <a href="/zhanr/drama/" >Драма</a>
+                        <a href="/zhanr/detektiv/" >Детектив</a>
+                        <a href="/zhanr/istoriya/" >История</a>
+                        <a href="/zhanr/komediya/" >Комедия</a>
+                        <a href="/zhanr/mekha/" >Меха</a>
+                        <a href="/zhanr/mistika/" >Мистика</a>
+                    </span>
+                    <span id="blok_2" >
+                        <a href="/zhanr/makho-sedze/" >Махо-сёдзё</a>
+                        <a href="/zhanr/muzykalnyy/" >Музыкальный</a>
+                        <a href="/zhanr/povsednevnost/" >Повседневность</a>
+                        <a href="/zhanr/priklyucheniya/" >Приключения</a>
+                        <a href="/zhanr/parodiya/" >Пародия</a>
+                        <a href="/zhanr/romantika/" >Романтика</a>
+                        <a href="/zhanr/senen/" >Сёнэн</a>
+                        <a href="/zhanr/sedze/" >Сёдзё</a>
+                    </span>
+                    <span id="blok_3" >
+                        <a href="/zhanr/sport/" >Спорт</a>
+                        <a href="/zhanr/skazka/" >Сказка</a>
+                        <a href="/zhanr/sedze-ay/" >Сёдзё-ай</a>
+                        <a href="/zhanr/senen-ay/" >Сёнэн-ай</a>
+                        <a href="/zhanr/samurai/" >Самураи</a>
+                        <a href="/zhanr/triller/" >Триллер</a>
+                        <a href="/zhanr/uzhasy/" >Ужасы</a>
+                        <a href="/zhanr/fantastika/" >Фантастика</a>
+                    </span>
+                    <span id="blok_78" >
+                        <a href="/zhanr/fentezi/" >Фэнтези</a>
+                        <a href="/zhanr/shkola/" >Школа</a>
+                        <a href="/zhanr/etti/" >Этти</a>
+                    </span>
+                    <div class="clr"></div>
+                </div></li>
+                <li><a href="/tip/">Категории</a>
+                <span class="sar">
+                        <span id="blok_4" >
+                            <a href="/tip/tv/" >ТВ</a>
+                            <a href="/tip/tv-speshl/" >ТВ-спэшл</a>
+                            <a href="/tip/ova/" >OVA</a>
+                            <a href="/tip/ona/" >ONA</a>
+                            <a href="/tip/polnometrazhnyy-film/" >Полнометражный фильм</a>
+                            <a href="/tip/korotkometrazhnyy-film/" >Короткометражный фильм</a>
+                            <a href="/tip/dunkhua/" >Дунхуа</a>
+                        </span>
+                    </span>
+                </li>
+                <li><a href="/god/">Год</a>
+                <span class="sar">
+                    	<span id="blok_19" >
+                        <a href="/god/1971/" >1971</a>
+                        <a href="/god/1977/" >1977</a>
+                        <a href="/god/1980/" >1980</a>
+                        <a href="/god/1984/" >1984</a>
+                        <a href="/god/1991/" >1991</a>
+                        <a href="/god/1992/" >1992</a>
+                        </span>
+                        <span id="blok_5" >
+                        <a href="/god/1993/" >1993</a>
+                        <a href="/god/1994/" >1994</a>
+                        <a href="/god/1995/" >1995</a>
+                        <a href="/god/1996/" >1996</a>
+                        <a href="/god/1997/" >1997</a>
+                        <a href="/god/1998/" >1998</a>
+                        </span>
+                    	<span id="blok_6" >
+                        <a href="/god/1999/" >1999</a>
+                        <a href="/god/2000/" >2000</a>
+                        <a href="/god/2001/" >2001</a>
+                        <a href="/god/2002/" >2002</a>
+                        <a href="/god/2003/" >2003</a>
+                        <a href="/god/2004/" >2004</a>
+                        </span>
+                    	<span id="blok_7" >
+                        <a href="/god/2005/" >2005</a>
+                        <a href="/god/2006/" >2006</a>
+                        <a href="/god/2007/" >2007</a>
+                        <a href="/god/2008/" >2008</a>
+                        <a href="/god/2009/" >2009</a>
+						<a href="/god/2010/" >2010</a>
+                        </span>
+                    	<span id="blok_8" >
+                        <a href="/god/2011/" >2011</a>
+                        <a href="/god/2012/" >2012</a>
+                        <a href="/god/2013/" >2013</a>
+                        <a href="/god/2014/" >2014</a>
+                        <a href="/god/2015/" >2015</a>
+                        <a href="/god/2016/" >2016</a>
+                    </span>
+						<span id="blok_20" >
+                        <a href="/god/2017/" >2017</a>
+                        <a href="/god/2018/" >2018</a>
+                        <a href="/god/2019/" >2019</a>
+                        <a href="/god/2020/" >2020</a>
+                        <a href="/god/2021/" >2021</a>
+                        <a href="/god/2022/" >2022</a>
+						</span>
+					<span id="blok_21" >
+                        <a href="/god/2023/" >2023</a>
+                        <a href="/god/2024/" >2024</a>
+                    </span>
+					
+					</span>
+                </li>
+                <li><a href="/ongoing/">Онгоинги</a></li>
+		<li><a href="/preview/">Анонсы</a></li>
+                <li><a href="/index.php?do=feedback">Контакты</a></li>
+                <li><a href="/dlya-pravoobladateley.html">Правообладателям</a></li>
+                <li><a href="/index.php?action=mobile">Мобильная версия</a></li>
+            </ul>
+            <a href="/rss.xml"><img class="rss" src="/templates/AnimeVostNext5/images/rssFF.png" alt="rss"/></a>
+        </div>
+        <div class="clr"></div>
+    </div>
+
+<!-- Шапка конец -->
+
+
+<!-- Левый блок -->
+   <div style="margin: 0 auto; width: 1000px;">
+       
+    <div id="leftBlock-1">
+        
+
+        <div id="moduleLeft-1" style="border-bottom:0px;">
+            <div class="interDub" style="background: #fde1c5; border: 1px solid #feb94f; text-align: center; padding: 5px; padding-bottom: 15px;">
+                <p style="color: #c47504; font-weight: bold; text-shadow: 0 1px 0 #fff; font-size: 18px;">Рабочее зеркало<br>сайта animevost для<br />жителей РФ и Казахстана</p>
+                <br>
+                <a target="_blank" style="color: red; text-transform: uppercase; font-weight: bold; font-size: 26px;" href="https://v2.vost.pw">Ссылка</a>
+                <br />
+                <a style="text-align: center; margin-top: 5px; display: block; color:#c47504; font-size: 12px;" href="/zerkalo.html">Что такое зеркало?</a>
+            </div>
+        </div>
+
+        <!-- Последние обновления -->
+        <div id="moduleLeft-1" style="border-bottom:0px;">
+            <div class="interDub">
+                <div class="interDubBgTwo" style="padding: 0;">
+			<h2>Последние обновления</h2>
+<ul class="raspis raspis_fixed">
+	<li><a href="https://v2.vost.pw/tip/tv/3139-metallic-rouge.html">Металлическая Руж / Metallic Rouge [1-2 из 12+]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3125-mahou-shoujo-ni-akogarete.html">Становясь волшебницей / Mahou Shoujo ni Akogarete [1-3 из 12+] [4 серия - 24 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3123-sengoku-youko.html">Ёко из Сэнгоку / Sengoku Youko [1-2 из 12+] [3 серия - 24 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3114-ishura.html">Исура / Ishura [1-3 из 12+] [4 серия - 24 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3103-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-3rd-season.html">Добро пожаловать в класс превосходства (третий сезон) / Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 3rd Season [1-3 из 12+] [4 серия - 24 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3133-gekai-elise.html">Королева со скальпелем / Gekai Elise [1-2 из 12+] [3 серия - 24 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3127-jaku-chara-tomozaki-kun-2nd-stage.html">Низкоуровневый персонаж Томодзаки (второй сезон) / Jaku-Chara Tomozaki-kun 2nd Stage [1-3 из 12+]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3041-da-zhu-zai-nian-fan.html">Великий правитель / Da Zhu Zai Nian Fan [1-31 из 52]</a></li>
+	<li><a href="https://v2.vost.pw/tip/ona/3092-tian-guan-cifu-er.html">Благословение небожителей (второй сезон) / Tian Guan Cifu Er [1-12 из 12]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/2724-wanmei-shijie.html">Безупречный мир / Wanmei Shijie [1-145 из 170+]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/2857-doupo-cangqiong-nian-fan.html">Расколотая битвой синева небес (пятый сезон) / Doupo Cangqiong: Nian Fan [1-79 из 104]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3122-shaman-king-flowers.html">Король шаманов: Цветы / Shaman King: Flowers [1-2 из 12+] [3 серия - 23 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3119-akuyaku-reijou-level-99-watashi-wa-ura-boss-desu-ga-maou-dewa-arimasen.html">Злодейка девяносто девятого уровня: «Я босс, но не король демонов» / Akuyaku Reijou Level 99: Watashi wa Ura-Boss desu ga Maou dewa Arimasen [1-2 из 12+] [3 серия - 23 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/2761-tunshi-xingkong.html">Пожиратель звёзд / Tunshi Xingkong [1-102 из 156]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3120-dosanko-gal-wa-namara-menkoi.html">Досанко-гяру чудо как милы / Dosanko Gal wa Namara Menkoi [1-2 из 12+] [3 серия - 22 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3117-oroka-na-tenshi-wa-akuma-to-odoru.html">Неразумный ангел в танце с демоном / Oroka na Tenshi wa Akuma to Odoru [1-2 из 12+] [3 серия - 22 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3118-himesama-goumon-no-jikan-desu.html">Время пыток, принцесса! / Himesama "Goumon" no Jikan desu [1-2 из 12+] [3 серия - 22 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3036-synduality-noir.html">Синдуальность: Нуар / Synduality: Noir [1-14 из 24+]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3071-xian-ni.html">Противостояние святого / Xian Ni [1-19 из 24]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3132-tsuki-ga-michibiku-isekai-douchuu-2nd-season.html">Лунное путешествие приведёт к новому миру (второй сезон) / Tsuki ga Michibiku Isekai Douchuu 2nd Season [1-2 из 12+] [3 серия - 22 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3116-high-card-season-2.html">Старшая карта (второй сезон) / High Card Season 2 [1-2 из 12+]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3129-kyuujitsu-no-warumono-san.html">Выходной Господина Злодея / Kyuujitsu no Warumono-san [1-2 из 12+]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3111-banished-from-the-heroes-party-2.html">Меня выгнали из гильдии героев, потому что я был плохим компаньоном, поэтому я решил неспешно жить в глуши (второй сезон) / Banished from the Heroes' Party 2 [1-2 из 12+] [3 серия - 21 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3113-isekai-de-mofumofu-nadenade-suru-tame-ni-ganbattemasu.html">Я делаю всё возможное, чтобы чувствовать себя как дома в другом мире / Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu. [1-3 из 12+] [4 серия - 21 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3110-loop-7-kaime-no-akuyaku-reijou-wa-moto-tekikoku-de-jiyuu-kimama-na-hanayome-seikatsu-wo-mankitsu-suru.html">Злодейка наслаждается своей седьмой жизнью в качестве свободолюбивой невесты во вражеской стране / Loop 7-kaime no Akuyaku Reijou wa, Moto Tekikoku de Jiyuu Kimama na Hanayome Seikatsu wo Mankitsu suru [1-2 из 12+] [3 серия - 21 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3089-nanatsu-no-taizai-mokushiroku-no-yonkishi.html">Семь смертных грехов: Четыре всадника Апокалипсиса / Nanatsu no Taizai: Mokushiroku no Yonkishi [1-13 из 24]</a></li>
+	<li><a href="https://v2.vost.pw/tip/ona/3082-ni-tian-xieshen.html">Восставший против неба / Ni Tian Xieshen [1-19 из 24+]</a></li>
+	<li><a href="https://v2.vost.pw/tip/ona/3102-the-daily-life-of-the-immortal-king-4.html">Повседневная Жизнь Бессмертного Короля (четвёртый сезон) / The Daily Life of the Immortal King 4 [1-6 из 12+]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/179-one-piece44.html">Ван Пис / One Piece [1-1090 из 10000+] [1091 серия - 21 января]</a></li>
+	<li><a href="https://v2.vost.pw/tip/tv/3112-saikyou-tank-no-meikyuu-kouryaku-tairyoku-9999-no-rare-skill-mochi-tank-yuusha-party-wo-tsuihou-sareru.html">Невероятный танк проходит подземелья: Танк, обладающий редким навыком выносливости 9999, был изгнан из геройской группы / Saikyou Tank no Meikyuu Kouryaku: Tairyoku 9999 no Rare Skill-mochi Tank, Yuusha Party wo Tsuihou sareru [1-2 из 12+]</a></li>
+
+</ul>
+           
+                </div>
+            </div>
+        </div>
+        <!-- Последние обновления -->
+        <div id="moduleLeft-1" style="border:0;">
+            <div class="interDub-2">
+                <div style="border: 1px solid #feb94f;margin:auto;">
+
+<center"><a href="https://loliland.ru/source/animevost_1" target="_blank"><img style="width: 258px;" src="/uploads/posts/2020-08/1598184176_loliland-min.gif" /></a></center>
+
+                </div>
+            </div>
+        </div>
+        <!-- Расписание -->
+        <div id="moduleLeft-1" style="border-bottom:0px;">
+            <div class="interDub">
+                <div class="interDubBgTwo">
+			                <b style="padding:11px 0px; display: block; text-align: center; color:#c97e09; font-size: 18px; border-bottom: 1px solid #fbc167;">Расписание</b>
+                <p style="padding: 8px 0px; display: block; text-align: center; color:#825001; font-weight: bold; font-size: 12px;">Представлены только те аниме, которые озвучивает сайт animevost.</p>
+
+                <a style="display: block; background: #ffb84d; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 18px; padding:6px 0; text-align: center;" href="javascript:ShowOrHide('raspisMon')">Понедельник</a>
+                <div id="raspisMon" style="display: none;" class='raspis'>
+					<a href="/tip/tv/3116-high-card-season-2.html">Старшая карта (второй сезон) ~ (18:00)</a>
+					<a href="/tip/tv/3132-tsuki-ga-michibiku-isekai-douchuu-2nd-season.html">Лунное путешествие приведёт к новому миру (второй сезон) ~ (20:30)</a>
+					<a href="/tip/tv/3118-himesama-goumon-no-jikan-desu.html">Время пыток, принцесса! ~ (21:30)</a>
+                    <a href="/tip/tv/3120-dosanko-gal-wa-namara-menkoi.html">Досанко-гяру чудо как милы ~ (22:30)</a>
+					<a href="/tip/tv/3117-oroka-na-tenshi-wa-akuma-to-odoru.html">Неразумный ангел в танце с демоном ~ (23:00)</a>
+					<a href="/tip/tv/3036-synduality-noir.html">Синдуальность: Нуар ~ (23:00)</a>
+</div>
+                <a style="display: block; margin-top: 5px; background: #ffb84d; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 18px; padding:6px 0; text-align: center;" href="javascript:ShowOrHide('raspisTue')">Вторник</a>
+                <div id="raspisTue" style="display: none;"  class='raspis'>
+                    <a href="/tip/tv/3119-akuyaku-reijou-level-99-watashi-wa-ura-boss-desu-ga-maou-dewa-arimasen.html">Злодейка девяносто девятого уровня: «Я босс, но не король демонов»  ~ (22:30)</a>
+                    <a href="/tip/tv/3122-shaman-king-flowers.html">Король шаманов: Цветы  ~ (22:30)</a>
+                    
+                </div>
+				<a style="display: block; margin-top: 5px; background: #ffb84d; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 18px; padding:6px 0; text-align: center;" href="javascript:ShowOrHide('raspisWed')">Среда</a>
+                <div id="raspisWed" style="display: none;"  class='raspis'> 
+                <a href="/tip/tv/3127-jaku-chara-tomozaki-kun-2nd-stage.html">Низкоуровневый персонаж Томодзаки (второй сезон) ~ (18:00)</a>
+                <a href="/tip/tv/3133-gekai-elise.html">Королева со скальпелем ~ (19:30)</a>
+                <a href="/tip/tv/3103-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-3rd-season.html">Добро пожаловать в класс превосходства (третий сезон) ~ (20:00)</a>
+                <a href="/tip/tv/3125-mahou-shoujo-ni-akogarete.html">Становясь волшебницей ~ (21:30)</a>
+                <a href="/tip/tv/3114-ishura.html">Исура ~ (21:30)</a>
+                <a href="/tip/tv/3123-sengoku-youko.html">Ёко из Сэнгоку ~ (22:00)</a>
+                <a href="/tip/tv/3139-metallic-rouge.html">Металлическая Руж ~ (22:30)</a>
+                </div>
+                <a style="display: block; margin-top: 5px; background: #ffb84d; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 18px; padding:6px 0; text-align: center;" href="javascript:ShowOrHide('raspisThu')">Четверг</a>
+                <div id="raspisThu" style="display: none;"  class='raspis'>
+                    <a href="/tip/tv/3134-dungeon-meshi.html">Подземелье вкусностей ~ (20:00)</a>
+                    <a href="/tip/tv/3140-gekkan-mousou-kagaku.html">Ежемесячник бредовой науки ~ (21:00)</a>
+                    <a href="/tip/tv/3104-mato-seihei-no-slave.html">Раб спецотряда демонического города ~ (21:30)</a>
+                    <a href="/tip/tv/3106-sokushi-cheat-ga-saikyou-sugite-isekai-no-yatsura-ga-marude-aite-ni-naranai-n-desu-ga.html">Другой мир не может противостоять силе мгновенной смерти ~ (22:00)</a>
+                    <a href="/tip/tv/2891-urusei-yatsura-2022.html">Несносные пришельцы (2022) ~ (23:00)</a>
+                    <a href="/tip/tv/3135-majo-to-yajuu.html">Ведьма и чудовище ~ (23:55)</a>
+                    <a href="/tip/tv/2849-shen-yin-wangzuo.html">Трон, отмеченный богом ~ (В течение дня)</a>
+                </div>
+                <a style="display: block; margin-top: 5px; background: #ffb84d; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 18px; padding:6px 0; text-align: center;" href="javascript:ShowOrHide('raspisFri')">Пятница</a>
+                <div id="raspisFri" style="display: none;"  class='raspis'>
+                    <a href="/tip/tv/3130-nozomanu-fushi-no-boukensha.html">Нежеланно бессмертный авантюрист ~ (19:00)</a>
+                    <a href="/tip/tv/3137-sasaki-to-pii-chan.html">Сасаки и Пи ~ (19:00)</a>
+                    <a href="/tip/tv/3044-sousou-no-frieren.html">Провожающая в последний путь Фрирен ~ (20:30)</a>
+                    <a href="/tip/tv/3105-momochi-san-chi-no-ayakashi-ouji.html">Принц демонов дома Момоти ~ (21:30)</a>
+                    <a href="/tip/tv/3124-saijaku-tamer-wa-gomi-hiroi-no-tabi-wo-hajimemashita.html">Слабейшая укротительница в путешествии по сбору питомцев ~ (21:30)</a>
+                    <a href="/tip/tv/3126-chiyu-mahou-no-machigatta-tsukaikata.html">Неправильный способ использования исцеляющей магии ~ (22:00)</a>
+                    <a href="/tip/tv/3073-undead-unluck.html">Нежити не повезло ~ (23:30)</a>
+                    <a href="/tip/tv/3108-pon-no-michi.html">Путь пона ~ (23:30)</a>
+                </div>
+                <a style="display: block; margin-top: 5px; background: #ffb84d; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 18px; padding:6px 0; text-align: center;" href="javascript:ShowOrHide('raspisSat')">Суббота</a>
+                <div id="raspisSat" style="display: none;"  class='raspis'>
+                
+                <a href="/tip/tv/3046-megumi-no-daigo-kyuukoku-no-orange.html">Дайго из пожарной команды: Оранжевый, спасающий страну ~ (15:00)</a>
+                <a href="/tip/tv/3107-kekkon-yubiwa-monogatari.html">Сказание об обручальных кольцах ~ (19:00)</a>
+                <a href="/tip/tv/3109-yubisaki-to-renren.html">Любовь с кончиков пальцев ~ (19:30)</a>
+                <a href="/tip/tv/3136-mashle-2nd-season.html">Магия и мускулы (второй сезон) ~ (21:00)</a>
+                <a href="/tip/tv/3131-solo-leveling.html">Поднятие уровня в одиночку ~ (22:00)</a>
+                <a href="/tip/tv/3115-ao-no-exorcist-shimane-illuminati-hen.html">Синий экзорцист (третий сезон) ~ (22:00)</a>
+                <a href="/tip/tv/3128-boku-no-kokoro-no-yabai-yatsu-season-2.html">Опасность в моём сердце (второй сезон) ~ (22:30)</a>
+                <a href="">Царство (пятый сезон) ~ (22:30)</a>
+                <a href="/tip/tv/3079-buta-no-liver-wa-kanetsu-shiro.html">Не ешь сырую свинину ~ (22:30)</a>
+                <a href="/tip/tv/3049-ragna-crimson.html">Рагна Багровый ~ (23:00)</a>
+                <a href="/tip/tv/3093-kusuriya-no-hitorigoto.html">Монолог фармацевта ~ (23:00)</a>
+                <a href="/tip/tv/3112-saikyou-tank-no-meikyuu-kouryaku-tairyoku-9999-no-rare-skill-mochi-tank-yuusha-party-wo-tsuihou-sareru.html">Невероятный танк проходит подземелья ~ (23:00)</a>
+                <a href="/tip/tv/3005-douluo-dalu-ii-jueshi-tangmen.html">Боевой континент (второй сезон) ~ (В течение дня)</a>
+                </div>
+                <a style="display: block; margin-top: 5px; background: #ffb84d; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 18px; padding:6px 0; text-align: center;" href="javascript:ShowOrHide('raspisSun')">Воскресенье</a>
+                <div id="raspisSun" style="display: none;"  class='raspis'>
+               
+                <a href="/tip/tv/179-one-piece.html">Ван Пис ~ (09:00)</a>
+                <a href="/tip/ona/3102-the-daily-life-of-the-immortal-king-4.html">Повседневная Жизнь Бессмертного Короля (четвёртый сезон) ~ (14:00)</a>
+                <a href="/tip/tv/3047-shangri-la-frontier-kusoge-hunter-kamige-ni-idoman-to-su.html">Рубеж Шангри-Ла: Любитель игрошлака бросает вызов топ-игре ~ (15:30)</a>
+                <a href="/tip/tv/3089-nanatsu-no-taizai-mokushiroku-no-yonkishi.html">Семь смертных грехов: Четыре всадника Апокалипсиса ~ (15:30)</a>
+                <a href="/tip/tv/3113-isekai-de-mofumofu-nadenade-suru-tame-ni-ganbattemasu.html">Я делаю всё возможное, чтобы чувствовать себя как дома в другом мире ~ (20:00)</a>
+                <a href="/tip/tv/3111-banished-from-the-heroes-party-2.html">Меня выгнали из гильдии героев, потому что я был плохим компаньоном, поэтому я решил неспешно жить в глуши ~ (20:00)</a>
+                <a href="/tip/tv/3110-loop-7-kaime-no-akuyaku-reijou-wa-moto-tekikoku-de-jiyuu-kimama-na-hanayome-seikatsu-wo-mankitsu-suru.html">Злодейка наслаждается своей седьмой жизнью в качестве свободолюбивой невесты во вражеской стране ~ (20:30)</a>
+                <a href="/tip/tv/3129-kyuujitsu-no-warumono-san.html">Выходной Господина Злодея ~ (23:00)</a>
+                    
+                </div>
+ 				
+				<p style="padding: 6px 4px 7px 4px; display: block; text-align: center; color:red; font-weight: bold; font-size: 12px;">Указано время выхода релиза в русской озвучке. (Московское)</p>
+				<script>
+				
+					var links = document.querySelectorAll('.raspis a[href]');
+					var create_popup = createPopup();
+					var popup_info = create_popup.popup;
+					var popup_desc = create_popup.desc;
+					var popup_img = create_popup.img;
+					var popup_right = create_popup.cont_img;
+					var popup_ser = create_popup.elem_ser;
+					var popup_time = create_popup.elem_time;
+					var t = false; 
+					var set_timer = false;
+					$.get('/time.php',function(data) {
+						t = +data;
+					});
+
+					for(var l = 0; l < links.length; l++){
+						var link = links[l];
+						link.addEventListener('mouseover', function(){
+							linkOver(this)
+						});
+						link.addEventListener('mouseout', function(){
+							linkOut(this)
+						});
+
+					}
+					function linkOver(link){
+						link.appendChild(popup_info);
+						popup_info.classList.add('hide');
+						var src = link.href;
+						var arr = src.split('/');
+						var index = arr.indexOf('tv');
+						if(index != -1){
+							var str = arr[index+1];
+							var arr_str = str.split('-');
+							var id = arr_str[0];
+
+							loadJson(id, link);
+						};
+					}
+					function linkOut(link){
+						popup_desc.innerHTML = '';
+						popup_img.src = '';
+						popup_ser.innerHTML = '0';
+						popup_time.innerHTML = '0:00:00:00';
+						clearInterval(set_timer)
+						link.removeChild(popup_info)
+					}
+
+					function loadJson(id, elem){
+						var url = 'https://api.animevost.org/animevost/api/v0.2/GetInfo/'+id;
+						var xhr = typeof XMLHttpRequest != 'undefined'
+								? new XMLHttpRequest()
+								: new ActiveXObject('Microsoft.XMLHTTP');
+						xhr.open('get', url, true);
+						xhr.onreadystatechange = function() {
+							var status;
+							var data;
+							if (xhr.readyState == 4) { 
+								status = xhr.status;
+								if (status == 200) {
+									data = JSON.parse(xhr.responseText);
+									updatePopup(data);
+								}
+							}
+						}
+				
+						xhr.send();
+					}
+					function createPopup(parent){
+						var popup = document.createElement('popup');
+						popup.className = 'popup';
+						//parent.appendChild(popup);
+						
+						var cont = document.createElement('div');
+						popup.appendChild(cont);
+						cont.className='desc';
+						//cont.innerHTML = json.data[0].description;
+						var cont_img = document.createElement('div');
+						cont_img.className = 'cont_img';
+						popup.appendChild(cont_img)
+						var img = document.createElement('img');
+						//img.src = json.data[0].urlImagePreview;
+						cont_img.appendChild(img);
+						img.onload = chechHeight;
+						var next_time = document.createElement('div');
+						next_time.className = 'nexttime';
+						next_time.innerHTML = 'До новой ';
+						cont_img.appendChild(next_time);;
+						var span_num_ser = document.createElement('span');
+						span_num_ser.innerHTML = 'серии';
+						next_time.appendChild(span_num_ser);
+						next_time.innerHTML += ' осталось:<br>'
+						var span_time = document.createElement('div');
+						span_time.innerHTML  = '0:00:00:00';
+						next_time.appendChild(span_time);
+
+
+				
+						return {
+							popup: popup,
+							desc: cont,
+							img: img,
+							cont_img: cont_img,
+							elem_ser: span_num_ser,
+							elem_time: span_time
+						}
+					}
+					function updatePopup(json){
+ popup_desc.innerHTML = json.data[0].description;
+ popup_img.src = json.data[0].urlImagePreview;
+
+
+ var has_class = popup_info.parentNode ? popup_info.parentNode.parentNode.parentNode.classList.contains('raspis_fixed') : false;
+ if(has_class){
+  var coor = popup_info.parentNode ? popup_info.parentNode.getBoundingClientRect() : false;
+  if(coor){
+   popup_info.style.position = 'fixed';
+   var top = (coor.top-120)
+   top = top < 0 ? 0 : top;
+   var left = coor.right+10;
+   popup_info.style.left = left + 'px';
+   popup_info.style.top = top + 'px';
+  }
+ } else {
+  popup_info.style.position = '';
+  popup_info.style.left = '';
+  popup_info.style.top = '';
+ }
+
+ setupTime(+json.data[0].timer)
+}
+					function setupTime(timer){
+						var left = timer - t;
+						clearInterval(set_timer)
+						set_timer = setInterval(function(){
+						var str = '0:00:00:00';
+							if(t && left > 0){
+	  							var foo = new Date;
+      							left = left - 1;
+
+								
+								var minutes = Math.floor(left / 60) || 0,
+      hours = Math.floor(minutes / 60) || 0,
+      days = Math.floor(hours / 24) || 0,
+      hours = hours % 24;
+								if (hours < 10){hours = "0"+hours};
+								var seconds = left%60;
+						        if (seconds < 10){seconds = "0"+seconds};
+								minutes %= 60;
+								if (minutes < 10){minutes = "0"+minutes};
+
+								str = days + ":" + hours +":"+ minutes +":"+ seconds ;
+							}
+
+							popup_time.innerHTML = str;
+							
+						}, 1000)
+					}
+					function chechHeight(){
+						var right = popup_right;
+						var elem = popup_desc;
+						if(!right.clientHeight) return
+
+						var prev_text = elem.innerHTML;
+						
+						var index_br = prev_text.lastIndexOf('br');
+						var arr = prev_text.split('<br /><br />');
+						if(arr.length){
+							var new_elem = document.createElement('div');
+							new_elem.className = 'example';
+							elem.appendChild(new_elem);
+							var res = false;
+							for(var i = 1; i < arr.length +1 ; i++){
+								if(res) continue
+								var new_arr = arr.slice(0, i);
+								new_elem.innerHTML = new_arr.join('<br /><br />');
+								res = new_elem.clientHeight > right.clientHeight;
+							}
+							var text = new_elem.innerHTML;
+							var l = text.length;
+							for (; l >= 0 && new_elem.clientHeight > right.clientHeight; --l) {
+								new_elem.innerHTML = text.substring(0, l) + '...';
+							}
+							elem.innerHTML = new_elem.innerHTML;
+							if(new_elem.parentNode){
+								new_elem.parentNode.removeChild(new_elem);
+							}
+						} else {
+
+							if(img.clientHeight && elem.clientHeight > right.clientHeight ){
+								var text = elem.innerHTML;
+								var l = text.length - 1;
+								for (; l >= 0 && elem.clientHeight > right.clientHeight; --l) {
+									elem.innerHTML = text.substring(0, l) + '...';
+								}
+							}
+						}
+						popup_info.classList.remove('hide');
+					}
+
+				</script>
+
+                </div>
+            </div>
+        </div>
+        <!-- Расписание конец -->
+		
+        <div id="moduleLeft-1" style="border-bottom:0px;">
+            <div class="interDub">
+                <div style="background: #39afea; border: 1px solid #2170d3; text-align: center; padding: 16px; width: 228px; margin: 0px auto; margin-top: 10px;"><a style="font-weight: bold; color: #0f51a4; font-size: 18px;" href="https://vk.vost.pw">Подпишись на наш ВК!</a></div>
+            </div>
+        </div>
+		
+        
+<div id="moduleLeft" style="border:0;">
+            <div class="interDub">
+                <div class="interDubBg" style="border: 1px solid #feb94f;margin:auto;">
+                    
+
+<!-- Yandex.RTB R-A-732347-4 -->
+<div id="yandex_rtb_R-A-732347-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-732347-4',
+    blockId: 'R-A-732347-4'
+  })
+})</script>
+                </div>
+            </div>
+        </div>
+
+		
+		
+
+
+
+
+
+        <div class="moduleLeft" style="border:0; margin-top: 15px;">
+            <script>
+    jQuery(document).ready(function(){
+        jQuery.get("/get_random_post.php",{},function(response) {
+            if (response) {
+                jQuery("#blockRandomPost").html(response);
+            }
+        });
+    });
+</script>
+<div id="blockRandomPost"></div>
+<!--
+<div class="imgOngoing"><div class="imgOngoingVie">Просмотров: 125821&nbsp;|&nbsp; Комментарий: 66</div><a href="https://v2.vost.pw/tip/tv/3139-metallic-rouge.html"><span>Металлическая Руж / Metallic Rouge</span></a><img src="/uploads/posts/2024-01/1704916131_1.jpg" alt="Металлическая Руж / Metallic Rouge" title="Металлическая Руж / Metallic Rouge" /></div>
+-->
+        </div>
+     
+        <div id="chat" style="display:none;width:1px;height:1px">
+	  <div id="chat_head">
+	    <div id="chat_load"></div>
+	  </div>
+	  <div id="chat_body">
+	    <!-- Окно с сообщениями -->
+	    <div id="chat_overview">
+	    </div>
+	    <!-- Окно с текстом для ввода -->
+	    <div id="chat_input" contenteditable="true">
+	    </div>
+	    <!-- Дополняющий контейнер с кнопкой, справа от окна ввода -->
+	    <div id="chat_filler">
+	      <button id="chat_send" class="display:none"></button>
+	    </div>
+	  </div>
+	</div>
+        
+    </div>
+<!-- Левый конец -->
+    
+    
+    <div id="centerBlock">
+        
+        
+        
+		
+		<div class="present">
+<h1>База №1 по просмотру аниме онлайн бесплатно</h1>
+    <p><b>Аниме</b> - это искусство мультипликации зародилось еще в XX в. на Востоке, в далекой Японии. Но что удивительно, своим названием этот жанр обязан вовсе не японскому слову. Как вы уже догадались, слово «<b>аниме</b>» это всего лишь сокращение от английского «animation», которое получило успешное распространение из-за своей простоты произношения. Однако, не нужно торопиться. Ведь именно познав простоту и легкость этого удивительного жанра, вы возможно познаете себя. Японская анимация обладает качественными отличиями от своих европейских собратьев. Все дело в особом менталитете и, конечно же, оригинальной рисовке. Приведу простой пример, в мультфильмах очень часто можно встретить персонажей, которые выражают свои эмоции в скрытой форме (японцы замкнутый и скрытый по натуре народ, но при этом они вежливые и гостеприимные, но их широта души не равна русской, так что осторожнее). Не только это до сих пор заставляет поклонников <b>аниме</b> <b>смотреть</b> все новые и новые серии, а некоторые даже собираются на особые фестивали в честь своего увлечения и устраивают костюмированное шоу-косплей. Вторым условием для просмотра этих мультфильмов я считаю детальную прорисованность и, как следствие, восхитительное качество фильма налицо.
+<br /><br />
+Популярность <b>аниме</b> и <b>аниме-сериалов</b> к настоящему времени сильно возросла. Даже трудно сказать, что сейчас популярнее манга <b>онлайн</b> или <b>аниме</b> <b>онлайн</b>. Но все же одно я могу сказать точно, что в интернете сейчас полным-полно сайтов, где куча материалов по вышеизложенной мною теме. Кстати, я считаю не лишним предложить вам посетить молодой проект animevost.org (АнимеВостОрг). Это полное собрание уже переведенных на русский язык <b>аниме</b>, плюс описания к ним. Для комфортного просмотра на сайте сделан удобный плеер, функционал которого приятно удивляет в самый подходящий момент.</p>
+</div>
+		
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+		
+
+		
+<div class="batre" align="center">
+<!-- Yandex.RTB R-A-732347-1 -->
+<div id="yandex_rtb_R-A-732347-1"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-732347-1',
+    blockId: 'R-A-732347-1'
+  })
+})</script>
+ </div>
+
+
+
+
+
+        
+    	
+        <div id="stext" style="margin: 0 0 10px 0; text-align: center;">
+            <div><form name="news_set_sort" id="news_set_sort" method="post" >Сортировать статьи по:&nbsp;<img src="/templates/AnimeVostNext5/dleimages/desc.gif" alt="" /><a href="#" onclick="dle_change_sort('date','asc'); return false;">дате</a> | <a href="#" onclick="dle_change_sort('rating','desc'); return false;">популярности</a> | <a href="#" onclick="dle_change_sort('news_read','desc'); return false;">посещаемости</a> | <a href="#" onclick="dle_change_sort('comm_num','desc'); return false;">комментариям</a> | <a href="#" onclick="dle_change_sort('title','desc'); return false;">алфавиту</a><input type="hidden" name="dlenewssortby" id="dlenewssortby" value="date" />
+<input type="hidden" name="dledirection" id="dledirection" value="DESC" />
+<input type="hidden" name="set_new_sort" id="set_new_sort" value="dle_sort_main" />
+<input type="hidden" name="set_direction_sort" id="set_direction_sort" value="dle_direction_main" />
+<script>
+<!-- begin
+
+function dle_change_sort(sort, direction){
+
+  var frm = document.getElementById('news_set_sort');
+
+  frm.dlenewssortby.value=sort;
+  frm.dledirection.value=direction;
+
+  frm.submit();
+  return false;
+};
+
+// end -->
+</script></form></div>
+        </div>
+        
+        
+        
+        <div id='dle-content'>		<div class="shortstory">
+            <div class="shortstoryHead">
+                
+                <h2>
+                    <a href="https://v2.vost.pw/tip/tv/3139-metallic-rouge.html">Металлическая Руж / Metallic Rouge [1-2 из 12+]</a>
+                </h2>
+            </div>
+            <div class="staticInfo">
+                <div class="staticInfoLeft">
+                    <span><a onclick="ShowProfile('animevost', 'https://v2.vost.pw/user/animevost/', '0'); return false;" href="https://v2.vost.pw/user/animevost/">animevost</a></span>
+                    <span class="staticInfoLeftData">17 январь 2024</span>
+                    
+                </div>
+                <div class="staticInfoRight">
+                    <span class="staticInfoRightSmotr">125821</span>
+                    <span><a href="https://v2.vost.pw/tip/tv/3139-metallic-rouge.html#comment">66</a></span> 
+                </div>
+            </div>
+            <div class="shortstoryContent">
+                <table>
+                <tr>
+                <td>
+                
+                    <div style="width: 240px; float: left; margin-right: 12px;">
+                    <a href="https://v2.vost.pw/tip/tv/3139-metallic-rouge.html">
+                    <img class="imgRadius" src="/uploads/posts/2024-01/1704916131_1.jpg" alt="Металлическая Руж / Metallic Rouge" title="Металлическая Руж / Metallic Rouge" />
+                    </a>
+                    </div>
+                
+                
+                <p><strong>Год выхода: </strong>2024</p>
+                <p><strong>Жанр: </strong>фантастика, 	приключения</p>
+                <p><strong>Тип: </strong>ТВ</p>
+                <p><strong>Количество серий: </strong>12+ (25 мин.)</p>
+                <p><strong>Режиссёр: </strong><a href="https://v2.vost.pw/xfsearch/%D0%A5%D0%BE%D1%80%D0%B8+%D0%9C%D0%BE%D1%82%D0%BE%D0%BD%D0%BE%D0%B1%D1%83/">Хори Мотонобу</a></p>
+                <div><strong>Рейтинг: </strong><div class="ratingIn" id='ratig-layer-3139'><div class="rating">
+		<ul class="unit-rating">
+		<li class="current-rating" style="width:60%;">60</li>
+		<li><a href="#" title="Плохо" class="r1-unit" onclick="doRate('1', '3139'); return false;">1</a></li>
+		<li><a href="#" title="Приемлемо" class="r2-unit" onclick="doRate('2', '3139'); return false;">2</a></li>
+		<li><a href="#" title="Средне" class="r3-unit" onclick="doRate('3', '3139'); return false;">3</a></li>
+		<li><a href="#" title="Хорошо" class="r4-unit" onclick="doRate('4', '3139'); return false;">4</a></li>
+		<li><a href="#" title="Отлично" class="r5-unit" onclick="doRate('5', '3139'); return false;">5</a></li>
+		</ul>
+</div></div>&nbsp;<span style="font-size:11px; color:#000;">(Голосов: <span id="vote-num-id-3139">269</span>)</span></div>
+                <p><strong>Описание: </strong>Скромница Руж работала в театре, в котором довольно часто собирались зрители, и не без оснований. Примой театра стала красавица Сара. Руж исполняла обязанности костюмерши, не помышляя о чем-то большем. К девочке хорошо относились лишь Сара и подсобный рабочий, чье лицо было изуродовано шрамами. Он не был человеком, а был неаном, считавшихся шпионами пришельцев. Вот только и Руж была механическим созданием, которому требовалось особенное питание, поступавшее через шприц, воткнутый в отверстие в теле. Не просто так Руж была приставлена к Саре, ведь следовало отыскать кое-какие доказательства. <br>
+<br>
+К Руж прилетает птичка, на которую возложена роль получать от неё доклад. Сара старается скрывать тот факт, что является неаном. Однажды к ней является опасный монстр. Нападения Саре удалось избежать, а сама она решила, что угрожал ей Красный гладиатор. Все это видела птичка, но её убивает странный парень, недавно игравший колодой карт. За городом отмечаются кое-какие перепады с электроэнергией. У птички имелась оператор, и эта особа является к Руж. Та не могла поверить тому, что внутри птички был человек. Эта особа называет себя Наоми Ортманн. И она готова и дальше помогать Руж.</p>
+                </td>
+                </tr>
+                </table>
+                
+                
+            </div>
+            <div class="shortstoryFuter">
+                <form action="#">
+                
+                <a href="https://v2.vost.pw/tip/tv/3139-metallic-rouge.html">Смотреть</a>
+                </form>
+                <span><strong>Категории:</strong> <i><a href="https://v2.vost.pw/tip/tv/">ТВ</a>, <a href="https://v2.vost.pw/ongoing/">Онгоинги</a>, <a href="https://v2.vost.pw/god/2024/">2024</a>, <a href="https://v2.vost.pw/zhanr/priklyucheniya/">Приключения</a>, <a href="https://v2.vost.pw/zhanr/fantastika/">Фантастика</a></i></span>
+            </div>
+        </div>		<div class="shortstory">
+            <div class="shortstoryHead">
+                
+                <h2>
+                    <a href="https://v2.vost.pw/tip/tv/3125-mahou-shoujo-ni-akogarete.html">Становясь волшебницей / Mahou Shoujo ni Akogarete [1-3 из 12+] [4 серия - 24 января]</a>
+                </h2>
+            </div>
+            <div class="staticInfo">
+                <div class="staticInfoLeft">
+                    <span><a onclick="ShowProfile('animevost', 'https://v2.vost.pw/user/animevost/', '0'); return false;" href="https://v2.vost.pw/user/animevost/">animevost</a></span>
+                    <span class="staticInfoLeftData">17 январь 2024</span>
+                    
+                </div>
+                <div class="staticInfoRight">
+                    <span class="staticInfoRightSmotr">267359</span>
+                    <span><a href="https://v2.vost.pw/tip/tv/3125-mahou-shoujo-ni-akogarete.html#comment">212</a></span> 
+                </div>
+            </div>
+            <div class="shortstoryContent">
+                <table>
+                <tr>
+                <td>
+                
+                    <div style="width: 240px; float: left; margin-right: 12px;">
+                    <a href="https://v2.vost.pw/tip/tv/3125-mahou-shoujo-ni-akogarete.html">
+                    <img class="imgRadius" src="/uploads/posts/2023-12/1703610678_1.jpg" alt="Становясь волшебницей / Mahou Shoujo ni Akogarete" title="Становясь волшебницей / Mahou Shoujo ni Akogarete" />
+                    </a>
+                    </div>
+                
+                <h4>Gushing over Magical Girls</h4>
+                <p><strong>Год выхода: </strong>2024</p>
+                <p><strong>Жанр: </strong>этти, комедия, фэнтези</p>
+                <p><strong>Тип: </strong>ТВ</p>
+                <p><strong>Количество серий: </strong>12+ (25 мин.)</p>
+                <p><strong>Режиссёр: </strong><a href="https://v2.vost.pw/xfsearch/%D0%9E%D1%86%D1%83%D0%BA%D0%B8+%D0%90%D1%86%D1%83%D1%81%D0%B8/">Оцуки Ацуси</a></p>
+                <div><strong>Рейтинг: </strong><div class="ratingIn" id='ratig-layer-3125'><div class="rating">
+		<ul class="unit-rating">
+		<li class="current-rating" style="width:80%;">80</li>
+		<li><a href="#" title="Плохо" class="r1-unit" onclick="doRate('1', '3125'); return false;">1</a></li>
+		<li><a href="#" title="Приемлемо" class="r2-unit" onclick="doRate('2', '3125'); return false;">2</a></li>
+		<li><a href="#" title="Средне" class="r3-unit" onclick="doRate('3', '3125'); return false;">3</a></li>
+		<li><a href="#" title="Хорошо" class="r4-unit" onclick="doRate('4', '3125'); return false;">4</a></li>
+		<li><a href="#" title="Отлично" class="r5-unit" onclick="doRate('5', '3125'); return false;">5</a></li>
+		</ul>
+</div></div>&nbsp;<span style="font-size:11px; color:#000;">(Голосов: <span id="vote-num-id-3125">785</span>)</span></div>
+                <p><strong>Описание: </strong>Утэна Хираги грезила о том, чтобы стать волшебницей, и была уверенна в том, что у неё имеются соответствующие таланты и потенциал. Когда на её пути возникло невероятное существо Венадита и сообщило о том, что она наконец-то может стать той, кем мечтала, Утэна тотчас согласилась на прохождение инициации, позволяющей стать волшебницей. Когда процесс трансформации был завершен, Утэна была шокирована тем, что у неё на голове появились рога, а не какая-нибудь миленькая диадема, а в руках вместо мощного жезла красовалась черная палка. И это было лишь началом неожиданных открытий. Утэна стала форменной злодейкой.<br>
+<br>
+В своей новой ипостаси милашке придется сражаться с волшебницами, а те уже готовы к бою, ведь им важно уничтожить своих врагов в облике злодеев. Утэне не удается покинуть ряды злодейской армии и потому вступает в сражение. Она и сама от себя не ожидала, что сражение превратится в весьма даже приятное занятие, ведь злодейки издеваются над миленькими и практически беспомощными волшебницы, прибегая к едва ли не эротическим способам. Утэна ловит себя на мысли, насколько ей кайфово от происходящего, и перестает сокрушаться по поводу того, что оказалась злодейкой.</p>
+                </td>
+                </tr>
+                </table>
+                
+                
+            </div>
+            <div class="shortstoryFuter">
+                <form action="#">
+                
+                <a href="https://v2.vost.pw/tip/tv/3125-mahou-shoujo-ni-akogarete.html">Смотреть</a>
+                </form>
+                <span><strong>Категории:</strong> <i><a href="https://v2.vost.pw/tip/tv/">ТВ</a>, <a href="https://v2.vost.pw/ongoing/">Онгоинги</a>, <a href="https://v2.vost.pw/god/2024/">2024</a>, <a href="https://v2.vost.pw/zhanr/komediya/">Комедия</a>, <a href="https://v2.vost.pw/zhanr/fentezi/">Фэнтези</a>, <a href="https://v2.vost.pw/zhanr/etti/">Этти</a></i></span>
+            </div>
+        </div>		<div class="shortstory">
+            <div class="shortstoryHead">
+                
+                <h2>
+                    <a href="https://v2.vost.pw/tip/tv/3123-sengoku-youko.html">Ёко из Сэнгоку / Sengoku Youko [1-2 из 12+] [3 серия - 24 января]</a>
+                </h2>
+            </div>
+            <div class="staticInfo">
+                <div class="staticInfoLeft">
+                    <span><a onclick="ShowProfile('animevost', 'https://v2.vost.pw/user/animevost/', '0'); return false;" href="https://v2.vost.pw/user/animevost/">animevost</a></span>
+                    <span class="staticInfoLeftData">17 январь 2024</span>
+                    
+                </div>
+                <div class="staticInfoRight">
+                    <span class="staticInfoRightSmotr">123270</span>
+                    <span><a href="https://v2.vost.pw/tip/tv/3123-sengoku-youko.html#comment">22</a></span> 
+                </div>
+            </div>
+            <div class="shortstoryContent">
+                <table>
+                <tr>
+                <td>
+                
+                    <div style="width: 240px; float: left; margin-right: 12px;">
+                    <a href="https://v2.vost.pw/tip/tv/3123-sengoku-youko.html">
+                    <img class="imgRadius" src="/uploads/posts/2023-12/1703584081_1.jpg" alt="Ёко из Сэнгоку / Sengoku Youko" title="Ёко из Сэнгоку / Sengoku Youko" />
+                    </a>
+                    </div>
+                
+                
+                <p><strong>Год выхода: </strong>2024</p>
+                <p><strong>Жанр: </strong>приключения, фэнтези, драма, сёнэн</p>
+                <p><strong>Тип: </strong>ТВ</p>
+                <p><strong>Количество серий: </strong>37 (25 мин.)</p>
+                <p><strong>Режиссёр: </strong><a href="https://v2.vost.pw/xfsearch/%D0%90%D0%B9%D0%B4%D0%B7%D0%B0%D0%B2%D0%B0+%D0%9C%D0%B0%D1%81%D0%B0%D1%85%D0%B8%D1%80%D0%BE/">Айдзава Масахиро</a></p>
+                <div><strong>Рейтинг: </strong><div class="ratingIn" id='ratig-layer-3123'><div class="rating">
+		<ul class="unit-rating">
+		<li class="current-rating" style="width:80%;">80</li>
+		<li><a href="#" title="Плохо" class="r1-unit" onclick="doRate('1', '3123'); return false;">1</a></li>
+		<li><a href="#" title="Приемлемо" class="r2-unit" onclick="doRate('2', '3123'); return false;">2</a></li>
+		<li><a href="#" title="Средне" class="r3-unit" onclick="doRate('3', '3123'); return false;">3</a></li>
+		<li><a href="#" title="Хорошо" class="r4-unit" onclick="doRate('4', '3123'); return false;">4</a></li>
+		<li><a href="#" title="Отлично" class="r5-unit" onclick="doRate('5', '3123'); return false;">5</a></li>
+		</ul>
+</div></div>&nbsp;<span style="font-size:11px; color:#000;">(Голосов: <span id="vote-num-id-3123">175</span>)</span></div>
+                <p><strong>Описание: </strong>Существует мир, населенный не только людьми, но и демонами, названными катаварами. Двум расам удается сосуществовать вместе так, чтобы избегать конфликтов и уж тем более не допускать войн. Таким образом, демоны и люди создали весьма цивилизованное общество. Джинк и его сестра Тама относятся к разным расам, и воспринимают людей несхожим образом, причем иногда даже спорят по этому поводу. Таме нравятся люди, и никакие доводы против этого биологического вида не могут изменить её мнения. Девушка является катаваром, а брат принадлежит к человеческому виду. Джинк относится к людям довольно критично, он и вовсе ненавидит себе подобных.<br>
+<br>
+Брату и сестре придется взаимодействовать, чтобы разобраться в причине некоторых событий, что выглядят весьма странно, и ранее ничего подобного не случалось. Подозрительность Тамы и Джинка оказалась не напрасной, а обоснованной. Им удается раскрыть страшный заговор, в центре которого находится ученый, действия которого превращает людей в чудовищ. И если его не остановить, мир сильно изменится, что нежелательно допускать. А вот уже получится юным созданиям вдвоем справиться со столь сложной задачей, даже они не смогут спрогнозировать.</p>
+                </td>
+                </tr>
+                </table>
+                
+                
+            </div>
+            <div class="shortstoryFuter">
+                <form action="#">
+                
+                <a href="https://v2.vost.pw/tip/tv/3123-sengoku-youko.html">Смотреть</a>
+                </form>
+                <span><strong>Категории:</strong> <i><a href="https://v2.vost.pw/tip/tv/">ТВ</a>, <a href="https://v2.vost.pw/ongoing/">Онгоинги</a>, <a href="https://v2.vost.pw/god/2024/">2024</a>, <a href="https://v2.vost.pw/zhanr/drama/">Драма</a>, <a href="https://v2.vost.pw/zhanr/priklyucheniya/">Приключения</a>, <a href="https://v2.vost.pw/zhanr/senen/">Сёнэн</a>, <a href="https://v2.vost.pw/zhanr/fentezi/">Фэнтези</a></i></span>
+            </div>
+        </div>		<div class="shortstory">
+            <div class="shortstoryHead">
+                
+                <h2>
+                    <a href="https://v2.vost.pw/tip/tv/3114-ishura.html">Исура / Ishura [1-3 из 12+] [4 серия - 24 января]</a>
+                </h2>
+            </div>
+            <div class="staticInfo">
+                <div class="staticInfoLeft">
+                    <span><a onclick="ShowProfile('animevost', 'https://v2.vost.pw/user/animevost/', '0'); return false;" href="https://v2.vost.pw/user/animevost/">animevost</a></span>
+                    <span class="staticInfoLeftData">17 январь 2024</span>
+                    
+                </div>
+                <div class="staticInfoRight">
+                    <span class="staticInfoRightSmotr">469131</span>
+                    <span><a href="https://v2.vost.pw/tip/tv/3114-ishura.html#comment">191</a></span> 
+                </div>
+            </div>
+            <div class="shortstoryContent">
+                <table>
+                <tr>
+                <td>
+                
+                    <div style="width: 240px; float: left; margin-right: 12px;">
+                    <a href="https://v2.vost.pw/tip/tv/3114-ishura.html">
+                    <img class="imgRadius" src="/uploads/posts/2023-12/1703328055_1.jpg" alt="Исура / Ishura" title="Исура / Ishura" />
+                    </a>
+                    </div>
+                
+                <h4>Ишура: Война нового короля демонов | Ishura: Shin Maou Sensou</h4>
+                <p><strong>Год выхода: </strong>2024</p>
+                <p><strong>Жанр: </strong>приключения, фэнтези</p>
+                <p><strong>Тип: </strong>ТВ</p>
+                <p><strong>Количество серий: </strong>12+ (25 мин.)</p>
+                <p><strong>Режиссёр: </strong><a href="https://v2.vost.pw/xfsearch/%D0%A2%D0%B0%D0%BA%D0%B0%D1%85%D0%B0%D1%81%D0%B8+%D0%A2%D0%B0%D0%BA%D1%8D%D0%BE/">Такахаси Такэо</a></p>
+                <div><strong>Рейтинг: </strong><div class="ratingIn" id='ratig-layer-3114'><div class="rating">
+		<ul class="unit-rating">
+		<li class="current-rating" style="width:60%;">60</li>
+		<li><a href="#" title="Плохо" class="r1-unit" onclick="doRate('1', '3114'); return false;">1</a></li>
+		<li><a href="#" title="Приемлемо" class="r2-unit" onclick="doRate('2', '3114'); return false;">2</a></li>
+		<li><a href="#" title="Средне" class="r3-unit" onclick="doRate('3', '3114'); return false;">3</a></li>
+		<li><a href="#" title="Хорошо" class="r4-unit" onclick="doRate('4', '3114'); return false;">4</a></li>
+		<li><a href="#" title="Отлично" class="r5-unit" onclick="doRate('5', '3114'); return false;">5</a></li>
+		</ul>
+</div></div>&nbsp;<span style="font-size:11px; color:#000;">(Голосов: <span id="vote-num-id-3114">773</span>)</span></div>
+                <p><strong>Описание: </strong>Так случилось что король демонов покинул свой мир, а после этого произошли определённые перемены. Мир отошёл под управление полубогов. Каждый из этих полубогов представлял собой занятную персону, но самое главное, что они были наделены невероятными способностями. Каждый полубог выступал могущественным воином. Фехтовальщику не представлялась сложной задача обнаружить у противника его слабые стороны. Копейщик мог преодолевать расстояние со скоростью звука. Вор стал легендой, а все потому, что умел одновременно сражаться при помощи трех видов оружий. Для волшебника не составляло труда мысль претворить в действительность, а убийца, обладавший ангельской внешностью, обеспечивал жертве мгновенную смерть. <br>
+<br>
+Всем этим удивительным персонам предстояло выбить для себя звание «Истинного героя», а для этого следует продемонстрировать их в сражениях. Причем для получения звания пришлось биться, как с противниками, так и друг с другом. Чтобы одолеть равного себе полубогам приходится идти на создание сложных интриг, но, чтобы выбраться из них с минимальным поражением. Коварство полубогов сильно, но козни не обеспечат победу, а достичь её можно жестокими методами.</p>
+                </td>
+                </tr>
+                </table>
+                
+                
+            </div>
+            <div class="shortstoryFuter">
+                <form action="#">
+                
+                <a href="https://v2.vost.pw/tip/tv/3114-ishura.html">Смотреть</a>
+                </form>
+                <span><strong>Категории:</strong> <i><a href="https://v2.vost.pw/tip/tv/">ТВ</a>, <a href="https://v2.vost.pw/ongoing/">Онгоинги</a>, <a href="https://v2.vost.pw/god/2024/">2024</a>, <a href="https://v2.vost.pw/zhanr/priklyucheniya/">Приключения</a>, <a href="https://v2.vost.pw/zhanr/fentezi/">Фэнтези</a></i></span>
+            </div>
+        </div>		<div class="shortstory">
+            <div class="shortstoryHead">
+                
+                <h2>
+                    <a href="https://v2.vost.pw/tip/tv/3103-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-3rd-season.html">Добро пожаловать в класс превосходства (третий сезон) / Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 3rd Season [1-3 из 12+] [4 серия - 24 января]</a>
+                </h2>
+            </div>
+            <div class="staticInfo">
+                <div class="staticInfoLeft">
+                    <span><a onclick="ShowProfile('animevost', 'https://v2.vost.pw/user/animevost/', '0'); return false;" href="https://v2.vost.pw/user/animevost/">animevost</a></span>
+                    <span class="staticInfoLeftData">17 январь 2024</span>
+                    
+                </div>
+                <div class="staticInfoRight">
+                    <span class="staticInfoRightSmotr">426817</span>
+                    <span><a href="https://v2.vost.pw/tip/tv/3103-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-3rd-season.html#comment">178</a></span> 
+                </div>
+            </div>
+            <div class="shortstoryContent">
+                <table>
+                <tr>
+                <td>
+                
+                    <div style="width: 240px; float: left; margin-right: 12px;">
+                    <a href="https://v2.vost.pw/tip/tv/3103-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-3rd-season.html">
+                    <img class="imgRadius" src="/uploads/posts/2023-12/1703068754_1.jpg" alt="Добро пожаловать в класс превосходства (третий сезон) / Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 3rd Season" title="Добро пожаловать в класс превосходства (третий сезон) / Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 3rd Season" />
+                    </a>
+                    </div>
+                
+                <h4>Classroom of the Elite III</h4>
+                <p><strong>Год выхода: </strong>2024</p>
+                <p><strong>Жанр: </strong>школа, драма, повседневность</p>
+                <p><strong>Тип: </strong>ТВ</p>
+                <p><strong>Количество серий: </strong>12+ (25 мин.)</p>
+                <p><strong>Режиссёр: </strong><a href="https://v2.vost.pw/xfsearch/%D0%9A%D0%B8%D1%81%D0%B8+%D0%A1%D1%8D%D0%B9%D0%B4%D0%B7%D0%B8/">Киси Сэйдзи</a></p>
+                <div><strong>Рейтинг: </strong><div class="ratingIn" id='ratig-layer-3103'><div class="rating">
+		<ul class="unit-rating">
+		<li class="current-rating" style="width:80%;">80</li>
+		<li><a href="#" title="Плохо" class="r1-unit" onclick="doRate('1', '3103'); return false;">1</a></li>
+		<li><a href="#" title="Приемлемо" class="r2-unit" onclick="doRate('2', '3103'); return false;">2</a></li>
+		<li><a href="#" title="Средне" class="r3-unit" onclick="doRate('3', '3103'); return false;">3</a></li>
+		<li><a href="#" title="Хорошо" class="r4-unit" onclick="doRate('4', '3103'); return false;">4</a></li>
+		<li><a href="#" title="Отлично" class="r5-unit" onclick="doRate('5', '3103'); return false;">5</a></li>
+		</ul>
+</div></div>&nbsp;<span style="font-size:11px; color:#000;">(Голосов: <span id="vote-num-id-3103">572</span>)</span></div>
+                <p><strong>Описание: </strong>События в школе Кодо Икусэй, известной, как трамплин для богатых детей в престижные университеты, а после в мир политики, бизнеса и прочие сферы, где им будет обеспечено получение сногсшибательной прибыли, продолжают шокировать. Как оказалось, даже в престижном учебном заведении имеются изгои, и учатся таковые в классе D. Киётака и угодил в такой класс, а все потому, что во время вступительного экзамена не отнесся с должным внимание к заданию. Парень знакомится с Сузунэ, не представляя, какие события ожидают их двоих, впрочем, не только их.<br>
+<br>
+Учащимся самого низшего класса приходится не просто терпеть издевательства со стороны более успешных сверстников, а и ощущать себя интеллектуально ниже, чем ученики других классов. Такое самовосприятие изрядно портит ребятам жизнь, но руководство учебного заведения остается индифферентным к их моральным страданиям. Большего внимания педагогического коллектива заслуживает непосредственно учебный план, поскольку материал подается ученикам на высоком уровне. А сами ученики уделяют немало внимания не только учебе, но и формированию своего имиджа, ведь школа не контролирует их стиль одежды, манеры и поведение в общем.</p>
+                </td>
+                </tr>
+                </table>
+                <!--dle_spoiler Это аниме состоит из: --><div class="title_spoiler"><a href="javascript:ShowOrHide('sp252a198de5cb2c63547378bdd689d802')"><img id="image-sp252a198de5cb2c63547378bdd689d802" style="vertical-align: middle;border: none;" alt="" src="/templates/AnimeVostNext5/dleimages/spoiler-plus.gif" /></a>&nbsp;<a href="javascript:ShowOrHide('sp252a198de5cb2c63547378bdd689d802')"><!--spoiler_title-->Это аниме состоит из:<!--spoiler_title_end--></a></div><div id="sp252a198de5cb2c63547378bdd689d802" class="text_spoiler" style="display:none;"><!--spoiler_text-->
+<ol>
+	<li><a href="/tip/tv/1904-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e.html" target="_blank" title="Добро пожаловать в класс превосходства">Добро пожаловать в класс превосходства</a> - ТВ (12 эп.), адаптация ранобэ, 2017</li>
+	<li><a href="/tip/tv/2816-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-2nd-season.html" target="_blank" title="Добро пожаловать в класс превосходства (второй сезон)">Добро пожаловать в класс превосходства (второй сезон)</a> - ТВ (13 эп.), продолжение, 2022</li>
+	<li><a href="/tip/tv/3103-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-3rd-season.html" target="_blank" title="Добро пожаловать в класс превосходства (третий сезон)">Добро пожаловать в класс превосходства (третий сезон)</a> - ТВ (13 эп.), продолжение, 2024</li>
+</ol><!--spoiler_text_end--></div><!--/dle_spoiler-->
+                
+            </div>
+            <div class="shortstoryFuter">
+                <form action="#">
+                
+                <a href="https://v2.vost.pw/tip/tv/3103-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-3rd-season.html">Смотреть</a>
+                </form>
+                <span><strong>Категории:</strong> <i><a href="https://v2.vost.pw/tip/tv/">ТВ</a>, <a href="https://v2.vost.pw/ongoing/">Онгоинги</a>, <a href="https://v2.vost.pw/god/2024/">2024</a>, <a href="https://v2.vost.pw/zhanr/drama/">Драма</a>, <a href="https://v2.vost.pw/zhanr/povsednevnost/">Повседневность</a>, <a href="https://v2.vost.pw/zhanr/shkola/">Школа</a></i></span>
+            </div>
+        </div>		<div class="shortstory">
+            <div class="shortstoryHead">
+                
+                <h2>
+                    <a href="https://v2.vost.pw/tip/tv/3133-gekai-elise.html">Королева со скальпелем / Gekai Elise [1-2 из 12+] [3 серия - 24 января]</a>
+                </h2>
+            </div>
+            <div class="staticInfo">
+                <div class="staticInfoLeft">
+                    <span><a onclick="ShowProfile('animevost', 'https://v2.vost.pw/user/animevost/', '0'); return false;" href="https://v2.vost.pw/user/animevost/">animevost</a></span>
+                    <span class="staticInfoLeftData">17 январь 2024</span>
+                    
+                </div>
+                <div class="staticInfoRight">
+                    <span class="staticInfoRightSmotr">171124</span>
+                    <span><a href="https://v2.vost.pw/tip/tv/3133-gekai-elise.html#comment">95</a></span> 
+                </div>
+            </div>
+            <div class="shortstoryContent">
+                <table>
+                <tr>
+                <td>
+                
+                    <div style="width: 240px; float: left; margin-right: 12px;">
+                    <a href="https://v2.vost.pw/tip/tv/3133-gekai-elise.html">
+                    <img class="imgRadius" src="/uploads/posts/2023-12/1703838509_1.jpg" alt="Королева со скальпелем / Gekai Elise" title="Королева со скальпелем / Gekai Elise" />
+                    </a>
+                    </div>
+                
+                <h4>Doctor Elise: The Royal Lady with the Lamp</h4>
+                <p><strong>Год выхода: </strong>2024</p>
+                <p><strong>Жанр: </strong>повседневность, фэнтези, комедия, романтика</p>
+                <p><strong>Тип: </strong>ТВ</p>
+                <p><strong>Количество серий: </strong>12+ (25 мин.)</p>
+                <p><strong>Режиссёр: </strong><a href="https://v2.vost.pw/xfsearch/%D0%A5%D0%B0%D0%B1%D0%B0%D1%80%D0%B0+%D0%9A%D1%83%D0%BC%D0%B8%D0%BA%D0%BE/">Хабара Кумико</a></p>
+                <div><strong>Рейтинг: </strong><div class="ratingIn" id='ratig-layer-3133'><div class="rating">
+		<ul class="unit-rating">
+		<li class="current-rating" style="width:80%;">80</li>
+		<li><a href="#" title="Плохо" class="r1-unit" onclick="doRate('1', '3133'); return false;">1</a></li>
+		<li><a href="#" title="Приемлемо" class="r2-unit" onclick="doRate('2', '3133'); return false;">2</a></li>
+		<li><a href="#" title="Средне" class="r3-unit" onclick="doRate('3', '3133'); return false;">3</a></li>
+		<li><a href="#" title="Хорошо" class="r4-unit" onclick="doRate('4', '3133'); return false;">4</a></li>
+		<li><a href="#" title="Отлично" class="r5-unit" onclick="doRate('5', '3133'); return false;">5</a></li>
+		</ul>
+</div></div>&nbsp;<span style="font-size:11px; color:#000;">(Голосов: <span id="vote-num-id-3133">291</span>)</span></div>
+                <p><strong>Описание: </strong>Красавица Сон Джихён в прошлом своем воплощении была императрицей Элизей де Клоранс, отличавшейся ужасающим нравом и невероятной жестокостью, в чем раскаялась, только оказавшись на пороге смерти. Тогда-то она дала клятвенное обещание, что не станет лишать людей жизни, а напротив, будет их спасать. В самом деле, в новой жизни Сон стала именно таким человеком, поскольку выучилась на хирурга и оказывала людям медицинскую помощь. Вот только добрые поступки не застраховали девушку от смерти, когда она находилась на борту самолета, а тот потерпел крушение.<br>
+<br>
+Гибель Сон Джихён стала причиной для её перехода в прошлую жизнь в образе той самой императрицы Элизы. Произошедшее девушка воспринимает, как шанс внести перемены в ход событий, что произошли давным-давно и сформировать новый образ, максимально положительный и лишенный тех страшных ошибок, за которые она понесла жестокую расплату. Будучи императрицей, она использует багаж знаний профессионального хирурга, что оказывается вполне даже необходимо для страждущих поданных. Но возникает одно непростое обстоятельство в виде помолвки с принцем Линденом де Романофф, ведь тогда она не сможет орудовать скальпелем.</p>
+                </td>
+                </tr>
+                </table>
+                
+                
+            </div>
+            <div class="shortstoryFuter">
+                <form action="#">
+                
+                <a href="https://v2.vost.pw/tip/tv/3133-gekai-elise.html">Смотреть</a>
+                </form>
+                <span><strong>Категории:</strong> <i><a href="https://v2.vost.pw/tip/tv/">ТВ</a>, <a href="https://v2.vost.pw/ongoing/">Онгоинги</a>, <a href="https://v2.vost.pw/god/2024/">2024</a>, <a href="https://v2.vost.pw/zhanr/komediya/">Комедия</a>, <a href="https://v2.vost.pw/zhanr/priklyucheniya/">Приключения</a>, <a href="https://v2.vost.pw/zhanr/romantika/">Романтика</a>, <a href="https://v2.vost.pw/zhanr/fentezi/">Фэнтези</a></i></span>
+            </div>
+        </div>		<div class="shortstory">
+            <div class="shortstoryHead">
+                
+                <h2>
+                    <a href="https://v2.vost.pw/tip/tv/3127-jaku-chara-tomozaki-kun-2nd-stage.html">Низкоуровневый персонаж Томодзаки (второй сезон) / Jaku-Chara Tomozaki-kun 2nd Stage [1-3 из 12+]</a>
+                </h2>
+            </div>
+            <div class="staticInfo">
+                <div class="staticInfoLeft">
+                    <span><a onclick="ShowProfile('animevost', 'https://v2.vost.pw/user/animevost/', '0'); return false;" href="https://v2.vost.pw/user/animevost/">animevost</a></span>
+                    <span class="staticInfoLeftData">17 январь 2024</span>
+                    
+                </div>
+                <div class="staticInfoRight">
+                    <span class="staticInfoRightSmotr">200882</span>
+                    <span><a href="https://v2.vost.pw/tip/tv/3127-jaku-chara-tomozaki-kun-2nd-stage.html#comment">51</a></span> 
+                </div>
+            </div>
+            <div class="shortstoryContent">
+                <table>
+                <tr>
+                <td>
+                
+                    <div style="width: 240px; float: left; margin-right: 12px;">
+                    <a href="https://v2.vost.pw/tip/tv/3127-jaku-chara-tomozaki-kun-2nd-stage.html">
+                    <img class="imgRadius" src="/uploads/posts/2023-12/1703611074_1.jpg" alt="Низкоуровневый персонаж Томодзаки (второй сезон) / Jaku-Chara Tomozaki-kun 2nd Stage" title="Низкоуровневый персонаж Томодзаки (второй сезон) / Jaku-Chara Tomozaki-kun 2nd Stage" />
+                    </a>
+                    </div>
+                
+                <h4>Bottom-tier Character Tomozaki 2nd Stage</h4>
+                <p><strong>Год выхода: </strong>2024</p>
+                <p><strong>Жанр: </strong>школа, драма, романтика</p>
+                <p><strong>Тип: </strong>ТВ</p>
+                <p><strong>Количество серий: </strong>12+ (25 мин.)</p>
+                <p><strong>Режиссёр: </strong><a href="https://v2.vost.pw/xfsearch/%D0%AF%D0%BD%D0%B0%D0%B3%D0%B8+%D0%A1%D0%B8%D0%BD%D1%81%D1%83%D0%BA%D1%8D/">Янаги Синсукэ</a></p>
+                <div><strong>Рейтинг: </strong><div class="ratingIn" id='ratig-layer-3127'><div class="rating">
+		<ul class="unit-rating">
+		<li class="current-rating" style="width:60%;">60</li>
+		<li><a href="#" title="Плохо" class="r1-unit" onclick="doRate('1', '3127'); return false;">1</a></li>
+		<li><a href="#" title="Приемлемо" class="r2-unit" onclick="doRate('2', '3127'); return false;">2</a></li>
+		<li><a href="#" title="Средне" class="r3-unit" onclick="doRate('3', '3127'); return false;">3</a></li>
+		<li><a href="#" title="Хорошо" class="r4-unit" onclick="doRate('4', '3127'); return false;">4</a></li>
+		<li><a href="#" title="Отлично" class="r5-unit" onclick="doRate('5', '3127'); return false;">5</a></li>
+		</ul>
+</div></div>&nbsp;<span style="font-size:11px; color:#000;">(Голосов: <span id="vote-num-id-3127">311</span>)</span></div>
+                <p><strong>Описание: </strong>Фумия Томодзаки поглощен виртуальным миром компьютерных игр, и даже не пытается отвлечься на реальность. А когда парень знакомится с девушкой, также поглощенной играми, к тому же из одной с ним школы, испытывает неподдельный восторг. Впрочем, и новообретенная подруга рада знакомству и готова развивать эти отношения. Девушке нравится Фумия, поскольку, как игрок он оказался достаточно сильным, но вместе с тем она считает, что ему следует отвлекаться от игр и уделять больше внимания реальности, тем более что та для подростков так привлекательна и полна массы увлекательных занятий.<br>
+<br>
+Фумия идет на поводу у подружки, и постепенно начинает окунаться в окружающую его действительность, находя её вполне даже привлекательной. Вдвоем они отправляются на прогулку в парк, находя это место достойным внимания, смотрят фильмы, сидят в кафе, где ведут банальные, но при этом приятные обоим разговоры. Между парнем и девушкой, как и следовало ожидать, возникает симпатия, вот только романтику разбавляют проблемы, с которыми придется Фумии разбираться, не убегая в виртуальную реальность. Хотя он неплохо сочетает оба занятия, и милашка, находящаяся рядом, готова ему помогать.</p>
+                </td>
+                </tr>
+                </table>
+                <!--dle_spoiler Это аниме состоит из: --><div class="title_spoiler"><a href="javascript:ShowOrHide('sp0d39ee77528bcefe5c1b3db91a603b26')"><img id="image-sp0d39ee77528bcefe5c1b3db91a603b26" style="vertical-align: middle;border: none;" alt="" src="/templates/AnimeVostNext5/dleimages/spoiler-plus.gif" /></a>&nbsp;<a href="javascript:ShowOrHide('sp0d39ee77528bcefe5c1b3db91a603b26')"><!--spoiler_title-->Это аниме состоит из:<!--spoiler_title_end--></a></div><div id="sp0d39ee77528bcefe5c1b3db91a603b26" class="text_spoiler" style="display:none;"><!--spoiler_text-->
+<ol>
+	<li><a href="/tip/tv/2557-jaku-chara-tomozaki-kun.html" target="_blank" title="Низкоуровневый персонаж Томодзаки">Низкоуровневый персонаж Томодзаки</a> - ТВ (12 эп.), адаптация ранобэ, 2021</li>
+	<li><a href="/tip/tv/3127-jaku-chara-tomozaki-kun-2nd-stage.html" target="_blank" title="Низкоуровневый персонаж Томодзаки (второй сезон)">Низкоуровневый персонаж Томодзаки (второй сезон)</a> - ТВ (13 эп.), продолжение, 2024</li>
+</ol><!--spoiler_text_end--></div><!--/dle_spoiler-->
+                
+            </div>
+            <div class="shortstoryFuter">
+                <form action="#">
+                
+                <a href="https://v2.vost.pw/tip/tv/3127-jaku-chara-tomozaki-kun-2nd-stage.html">Смотреть</a>
+                </form>
+                <span><strong>Категории:</strong> <i><a href="https://v2.vost.pw/tip/tv/">ТВ</a>, <a href="https://v2.vost.pw/ongoing/">Онгоинги</a>, <a href="https://v2.vost.pw/god/2024/">2024</a>, <a href="https://v2.vost.pw/zhanr/drama/">Драма</a>, <a href="https://v2.vost.pw/zhanr/romantika/">Романтика</a>, <a href="https://v2.vost.pw/zhanr/shkola/">Школа</a></i></span>
+            </div>
+        </div>		<div class="shortstory">
+            <div class="shortstoryHead">
+                
+                <h2>
+                    <a href="https://v2.vost.pw/tip/tv/3041-da-zhu-zai-nian-fan.html">Великий правитель / Da Zhu Zai Nian Fan [1-31 из 52]</a>
+                </h2>
+            </div>
+            <div class="staticInfo">
+                <div class="staticInfoLeft">
+                    <span><a onclick="ShowProfile('animevost', 'https://v2.vost.pw/user/animevost/', '0'); return false;" href="https://v2.vost.pw/user/animevost/">animevost</a></span>
+                    <span class="staticInfoLeftData">17 январь 2024</span>
+                    
+                </div>
+                <div class="staticInfoRight">
+                    <span class="staticInfoRightSmotr">679468</span>
+                    <span></span> 
+                </div>
+            </div>
+            <div class="shortstoryContent">
+                <table>
+                <tr>
+                <td>
+                
+                    <div style="width: 240px; float: left; margin-right: 12px;">
+                    <a href="https://v2.vost.pw/tip/tv/3041-da-zhu-zai-nian-fan.html">
+                    <img class="imgRadius" src="/uploads/posts/2023-07/1689712405_1.jpg" alt="Великий правитель / Da Zhu Zai Nian Fan" title="Великий правитель / Da Zhu Zai Nian Fan" />
+                    </a>
+                    </div>
+                
+                <h4>The Grand Lord | The Great Ruler</h4>
+                <p><strong>Год выхода: </strong>2023</p>
+                <p><strong>Жанр: </strong>приключения, фэнтези, история, боевые искусства, романтика</p>
+                <p><strong>Тип: </strong>ONA</p>
+                <p><strong>Количество серий: </strong>52 (20 мин.)</p>
+                
+                <div><strong>Рейтинг: </strong><div class="ratingIn" id='ratig-layer-3041'><div class="rating">
+		<ul class="unit-rating">
+		<li class="current-rating" style="width:60%;">60</li>
+		<li><a href="#" title="Плохо" class="r1-unit" onclick="doRate('1', '3041'); return false;">1</a></li>
+		<li><a href="#" title="Приемлемо" class="r2-unit" onclick="doRate('2', '3041'); return false;">2</a></li>
+		<li><a href="#" title="Средне" class="r3-unit" onclick="doRate('3', '3041'); return false;">3</a></li>
+		<li><a href="#" title="Хорошо" class="r4-unit" onclick="doRate('4', '3041'); return false;">4</a></li>
+		<li><a href="#" title="Отлично" class="r5-unit" onclick="doRate('5', '3041'); return false;">5</a></li>
+		</ul>
+</div></div>&nbsp;<span style="font-size:11px; color:#000;">(Голосов: <span id="vote-num-id-3041">529</span>)</span></div>
+                <p><strong>Описание: </strong>Му Чэнь проигнорировал правила Духовной земли и лишил жизни невинных, но не спешил признавать себя в этом виновным. По законам он заслуживал казни. На его сторону встает отец, полагая, что следует понять, что обусловило такие действия со стороны Му Чэня. Му Чэнь втянул в эти страшные дела Дзи Сюаня. Пять Великих академий готовы изгнать нарушителя из страны. В Северной духовной академии мастер среднего уровня Цяньэр Тан проверяет Му Чэня. Она взялась заботиться о нем, когда тот вернулся из Духовной земли. Отец настоял на том, чтобы Цяньэр Тан взялась его опекать. Ей приходится вступаться за Му Чэня, над которым насмехаются ученики.<br>
+<br>
+Му Чэню удалось подняться до уровня духовного движения, а потому сможет попасть на небеса. Из-за инцидента в Духовной стране его отстранили от тренировок на год. А вот уже в соревнования, которые проводились между западной и восточной академиями были ему доступны. В академиях много желающих сражаться в соревнованиях, ведь в будущем состоится сражение между пятью академиями. Амбиции движут учениками. Му Чэнь также не в силах устоять перед конфликтом учеников двух академий. Первый ученик Лю Янь выражает негодование по поводу поведения Му Чэня.</p>
+                </td>
+                </tr>
+                </table>
+                
+                
+            </div>
+            <div class="shortstoryFuter">
+                <form action="#">
+                
+                <a href="https://v2.vost.pw/tip/tv/3041-da-zhu-zai-nian-fan.html">Смотреть</a>
+                </form>
+                <span><strong>Категории:</strong> <i><a href="https://v2.vost.pw/tip/tv/">ТВ</a>, <a href="https://v2.vost.pw/tip/dunkhua/">Дунхуа</a>, <a href="https://v2.vost.pw/ongoing/">Онгоинги</a>, <a href="https://v2.vost.pw/god/2023/">2023</a>, <a href="https://v2.vost.pw/zhanr/boyevyye-iskusstva/">Боевые искусства</a>, <a href="https://v2.vost.pw/zhanr/istoriya/">История</a>, <a href="https://v2.vost.pw/zhanr/priklyucheniya/">Приключения</a>, <a href="https://v2.vost.pw/zhanr/romantika/">Романтика</a>, <a href="https://v2.vost.pw/zhanr/fentezi/">Фэнтези</a></i></span>
+            </div>
+        </div>		<div class="shortstory">
+            <div class="shortstoryHead">
+                
+                <h2>
+                    <a href="https://v2.vost.pw/tip/ona/3092-tian-guan-cifu-er.html">Благословение небожителей (второй сезон) / Tian Guan Cifu Er [1-12 из 12]</a>
+                </h2>
+            </div>
+            <div class="staticInfo">
+                <div class="staticInfoLeft">
+                    <span><a onclick="ShowProfile('animevost', 'https://v2.vost.pw/user/animevost/', '0'); return false;" href="https://v2.vost.pw/user/animevost/">animevost</a></span>
+                    <span class="staticInfoLeftData">17 январь 2024</span>
+                    
+                </div>
+                <div class="staticInfoRight">
+                    <span class="staticInfoRightSmotr">362171</span>
+                    <span></span> 
+                </div>
+            </div>
+            <div class="shortstoryContent">
+                <table>
+                <tr>
+                <td>
+                
+                    <div style="width: 240px; float: left; margin-right: 12px;">
+                    <a href="https://v2.vost.pw/tip/ona/3092-tian-guan-cifu-er.html">
+                    <img class="imgRadius" src="/uploads/posts/2023-10/1697954622_giq25aabw_a.jpg" alt="Благословение небожителей (второй сезон) / Tian Guan Cifu Er" title="Благословение небожителей (второй сезон) / Tian Guan Cifu Er" />
+                    </a>
+                    </div>
+                
+                <h4>Heaven Officials&#039; Blessing 2</h4>
+                <p><strong>Год выхода: </strong>2023</p>
+                <p><strong>Жанр: </strong>приключения, история, фэнтези, драма</p>
+                <p><strong>Тип: </strong>ONA</p>
+                <p><strong>Количество серий: </strong>12 (25 мин.)</p>
+                
+                <div><strong>Рейтинг: </strong><div class="ratingIn" id='ratig-layer-3092'><div class="rating">
+		<ul class="unit-rating">
+		<li class="current-rating" style="width:80%;">80</li>
+		<li><a href="#" title="Плохо" class="r1-unit" onclick="doRate('1', '3092'); return false;">1</a></li>
+		<li><a href="#" title="Приемлемо" class="r2-unit" onclick="doRate('2', '3092'); return false;">2</a></li>
+		<li><a href="#" title="Средне" class="r3-unit" onclick="doRate('3', '3092'); return false;">3</a></li>
+		<li><a href="#" title="Хорошо" class="r4-unit" onclick="doRate('4', '3092'); return false;">4</a></li>
+		<li><a href="#" title="Отлично" class="r5-unit" onclick="doRate('5', '3092'); return false;">5</a></li>
+		</ul>
+</div></div>&nbsp;<span style="font-size:11px; color:#000;">(Голосов: <span id="vote-num-id-3092">404</span>)</span></div>
+                <p><strong>Описание: </strong>В один из обычных дней становится известно о возвращении легендарного Се Ляня.. Эта новость приобретает в королевстве первостепенное значение. Собиратель цветов под крабовым дождём будто бы имел определённый план действий, связанный с его возвращением. Кроме того, становится известно о серьёзном ранении генерала. Его было не узнать, настолько тяжёлым было положение раненого. Се Лянь рад своему возвращению, при этом испытывает стеснения от того, что доставляет неудобства. Не позабыл он один разговор из прошлого, который касался города-призраков. Се Лянь имел некоторое представление об этом городе, но оно было довольно-таки поверхностное.<br>
+<br>
+Кому ныне принадлежал этот город, оставалось загадкой. Впрочем, на эту загадку достаточно быстро появляется ответ. Возникает предположение, что власть в городе принадлежит Чэн Хуа. Парень с повязкой на глазу лишь довольно ухмыляется по поводу догадок, которые возникают относительно его персоны. А разобраться с тем, кто это, вернувшемуся королю придется. Се Ляню следует также разобраться в том, как обстоят дела в королевстве ныне, а также знакомиться с новыми людьми и вовлекаться в неожиданные и захватывающие события.</p>
+                </td>
+                </tr>
+                </table>
+                <!--dle_spoiler Это аниме состоит из: --><div class="title_spoiler"><a href="javascript:ShowOrHide('sp19fc75cb61a13b9dec223b39bffcdd99')"><img id="image-sp19fc75cb61a13b9dec223b39bffcdd99" style="vertical-align: middle;border: none;" alt="" src="/templates/AnimeVostNext5/dleimages/spoiler-plus.gif" /></a>&nbsp;<a href="javascript:ShowOrHide('sp19fc75cb61a13b9dec223b39bffcdd99')"><!--spoiler_title-->Это аниме состоит из:<!--spoiler_title_end--></a></div><div id="sp19fc75cb61a13b9dec223b39bffcdd99" class="text_spoiler" style="display:none;"><!--spoiler_text-->
+<ol>
+	<li><a href="/tip/tv/2534-tian-guan-ci-fu.html" target="_blank" title="Благословение небожителей">Благословение небожителей</a> - ТВ (11 эп.), адаптация манхвы, 2020</li>
+	<li><a href="/tip/ona/3092-tian-guan-cifu-er.html" target="_blank" title="Благословение небожителей (второй сезон)">Благословение небожителей (второй сезон)</a> - ТВ (12 эп.), продолжение, 2023</li>
+</ol><!--spoiler_text_end--></div><!--/dle_spoiler-->
+                
+            </div>
+            <div class="shortstoryFuter">
+                <form action="#">
+                
+                <a href="https://v2.vost.pw/tip/ona/3092-tian-guan-cifu-er.html">Смотреть</a>
+                </form>
+                <span><strong>Категории:</strong> <i><a href="https://v2.vost.pw/tip/ona/">ONA</a>, <a href="https://v2.vost.pw/tip/dunkhua/">Дунхуа</a>, <a href="https://v2.vost.pw/god/2023/">2023</a>, <a href="https://v2.vost.pw/zhanr/drama/">Драма</a>, <a href="https://v2.vost.pw/zhanr/istoriya/">История</a>, <a href="https://v2.vost.pw/zhanr/priklyucheniya/">Приключения</a>, <a href="https://v2.vost.pw/zhanr/fentezi/">Фэнтези</a></i></span>
+            </div>
+        </div>		<div class="shortstory">
+            <div class="shortstoryHead">
+                
+                <h2>
+                    <a href="https://v2.vost.pw/tip/tv/2724-wanmei-shijie.html">Безупречный мир / Wanmei Shijie [1-145 из 170+]</a>
+                </h2>
+            </div>
+            <div class="staticInfo">
+                <div class="staticInfoLeft">
+                    <span><a onclick="ShowProfile('animevost', 'https://v2.vost.pw/user/animevost/', '0'); return false;" href="https://v2.vost.pw/user/animevost/">animevost</a></span>
+                    <span class="staticInfoLeftData">17 январь 2024</span>
+                    
+                </div>
+                <div class="staticInfoRight">
+                    <span class="staticInfoRightSmotr">4398173</span>
+                    <span></span> 
+                </div>
+            </div>
+            <div class="shortstoryContent">
+                <table>
+                <tr>
+                <td>
+                
+                    <div style="width: 240px; float: left; margin-right: 12px;">
+                    <a href="https://v2.vost.pw/tip/tv/2724-wanmei-shijie.html">
+                    <img class="imgRadius" src="/uploads/posts/2023-10/1698389008_screenshot_5.png" alt="Безупречный мир / Wanmei Shijie" title="Безупречный мир / Wanmei Shijie" />
+                    </a>
+                    </div>
+                
+                
+                <p><strong>Год выхода: </strong>2021</p>
+                <p><strong>Жанр: </strong>приключения, фэнтези, сёнэн</p>
+                <p><strong>Тип: </strong>ONA</p>
+                <p><strong>Количество серий: </strong>170+ (25 мин.)</p>
+                
+                <div><strong>Рейтинг: </strong><div class="ratingIn" id='ratig-layer-2724'><div class="rating">
+		<ul class="unit-rating">
+		<li class="current-rating" style="width:80%;">80</li>
+		<li><a href="#" title="Плохо" class="r1-unit" onclick="doRate('1', '2724'); return false;">1</a></li>
+		<li><a href="#" title="Приемлемо" class="r2-unit" onclick="doRate('2', '2724'); return false;">2</a></li>
+		<li><a href="#" title="Средне" class="r3-unit" onclick="doRate('3', '2724'); return false;">3</a></li>
+		<li><a href="#" title="Хорошо" class="r4-unit" onclick="doRate('4', '2724'); return false;">4</a></li>
+		<li><a href="#" title="Отлично" class="r5-unit" onclick="doRate('5', '2724'); return false;">5</a></li>
+		</ul>
+</div></div>&nbsp;<span style="font-size:11px; color:#000;">(Голосов: <span id="vote-num-id-2724">2925</span>)</span></div>
+                <p><strong>Описание: </strong>Вооруженный мечом воин с младенцем на руках ступил ногой на территорию дворца. Родня младенца была вооружена до зубов и вела себя крайне агрессивно. Воин прибег к особой технике защиты и активировал дракона. Он был поражен тому, что кровные родичи так агрессивно восприняла появление младенца. К малышу приближается смертельная угроза, но его защитник перехватывает меч. На помощь воину приходит смелая девушка. С того дня прошло немало лет. Юный герой занимается тренировками, стараясь вырасти достойным воином. Ши Хао получил особое благословение небесами на свершение подвигов, что могут стать великими.<br>
+<br>
+Ши Хао был рожден в мире, погруженном в непростые условия. Кланы бились друг с другом за право получения контроля и власти. Такой период был сопряжен с особым накалом и потребностью быть готовым к различного рода сражениям. Клан, к которому относится Ши Хао, обучает его умению противостоять монстрам, а их довольно много, и представителям вражеских семейств. Вот только в полной мере овладеть силой Ши Хао позволит непростое и длительное путешествие. Отправившись в путь по неизведанным территориям, мальчик получает возможность встретиться с собственной судьбой.</p>
+                </td>
+                </tr>
+                </table>
+                
+                
+            </div>
+            <div class="shortstoryFuter">
+                <form action="#">
+                
+                <a href="https://v2.vost.pw/tip/tv/2724-wanmei-shijie.html">Смотреть</a>
+                </form>
+                <span><strong>Категории:</strong> <i><a href="https://v2.vost.pw/tip/tv/">ТВ</a>, <a href="https://v2.vost.pw/tip/dunkhua/">Дунхуа</a>, <a href="https://v2.vost.pw/ongoing/">Онгоинги</a>, <a href="https://v2.vost.pw/god/2021/">2021</a>, <a href="https://v2.vost.pw/zhanr/priklyucheniya/">Приключения</a>, <a href="https://v2.vost.pw/zhanr/senen/">Сёнэн</a>, <a href="https://v2.vost.pw/zhanr/fentezi/">Фэнтези</a></i></span>
+            </div>
+        </div><div class="block_2">
+	<table>
+    	<tr>
+        	<td class="block_3"></td>
+            <td class="block_4"><span>1</span> <a href="https://v2.vost.pw/page/2/">2</a> <a href="https://v2.vost.pw/page/3/">3</a> <a href="https://v2.vost.pw/page/4/">4</a> <a href="https://v2.vost.pw/page/5/">5</a> <a href="https://v2.vost.pw/page/6/">6</a> <a href="https://v2.vost.pw/page/7/">7</a> <a href="https://v2.vost.pw/page/8/">8</a> <a href="https://v2.vost.pw/page/9/">9</a> <a href="https://v2.vost.pw/page/10/">10</a> <span class="nav_ext">...</span> <a href="https://v2.vost.pw/page/309/">309</a></td>
+            <td class="block_5"></td>
+    	</tr>
+	</table>
+</div></div>
+    </div>
+    <div class="clr"></div>
+    <div id="futer">
+        <div id="fraind">
+            <span>
+		<a rel="nofollow" href="https://tr.anidub.com/" ><img alt="AniDub" src="/friends/anidub.jpg" width="88" height="31" /></a>
+                <a rel="nofollow" href="https://tt.animedia.tv/" ><img alt="Animedia" src="/friends/animedia.png" width="88" height="31" /></a>
+                <a rel="nofollow" href="https://vk.com/shanteau" ><img alt="Shanteau Store" src="/uploads/posts/2021-11/1636368964_anton-gandon.jpg" width="88" height="31" /></a>
+                <a rel="nofollow" href="https://shiza-project.com/" ><img alt="Shiza Project" src="/friends/shiza.png" width="88" height="31" /></a>
+                <a rel="nofollow" href="https://vk.com/kansai_official" ><img alt="Kansai" src="/friends/kansai.gif" width="88" height="31" /></a>
+                <a href="https://agor.pw" ></a>
+                 </span>
+        </div>
+        <div id="copyr">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/zhanr/">Жанр</a></li>
+                <li><a href="/tip/">Тип</a></li>
+                <li><a href="/god/">Год</a></li>
+                <li><a href="/ongoing/">Онгоинги</a></li>
+                <li><a href="/rules.html">Правила</a></li>
+            </ul>
+            <div id="copyrText">
+                Весь материал на сайте представлен исключительно для домашнего ознакомительного просмотра.
+            	Весь контент взят из свободных источников.
+                Если какой-либо материал нарушает ваши авторские права, <a style="color:rgb(172, 113, 8);" href="/index.php?do=feedback">свяжитись с нами</a> и мы его сразу же удалим, но мы не гарантируем что он не будет добавлен заново другим пользователем.
+                Копирование материала с сайта разрешено только при согласии администрации!
+                <span style="color: red; text-decoration: underline;">Возрастное ограничение 16+</span><br />
+            </div>
+            <div class="counter">
+            </div>
+        </div>
+    </div>
+       </div>
+</div>
+        <script src="/templates/AnimeVostNext5/js/jquery.easing.1.3.js"></script>
+		<!-- Скрипт jScrollPane -->
+        <script src="/templates/AnimeVostNext5/js/jquery.mousewheel.js"></script>
+        <script src="/templates/AnimeVostNext5/js/jquery.contentcarousel.js?v=2"></script>
+		<script>
+			$('#ca-container').contentcarousel();
+		</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69540171-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+    (function (w, d, s, e, i, u) {
+        w[e] = w[e] || [];
+        w[e].push({'admbnr.start': new Date().getTime(), event: 'load.js'});
+        w[e].push({'admbnr.uid': i, event: 'load.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+        j.async = true;
+        j.src = 'https://admachina.com/bv2/load.js?uid=' + i.join('|');
+        j.onerror = function () {
+            js = d.createElement(s);
+            js.async = true;
+            js.src = '/' + u + '.php?uid=' + i.join('|');
+            f.parentNode.insertBefore(js, f);
+        };
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'admbnr', ['a27699075a5','ab574d88c85'], 'a65e2320c4635c23e62be422be');
+</script>
+
+</body>
+</html>
+
+<!-- DataLife Engine Copyright SoftNews Media Group (http://dle-news.ru) -->
